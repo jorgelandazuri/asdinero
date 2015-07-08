@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+    	<!-- config -->
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- libraries -->
+        <script type="text/javascript" src="../cordova.js"></script>
+        <link rel="stylesheet" href="../js/lib/jqm/jquery.mobile-1.4.3.min.css" />
+        <script type="text/javascript" src="../js/lib/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="../js/lib/jqm/jquery.mobile-1.4.3.min.js"></script> 
+        <script type="text/javascript" src="../js/lib/jqr/jquery.jrumble.1.3.min.js"></script>
+        <script src="../js/lib/jquery.textfill.min.js"></script>
+        <script src="../js/lib/jqui-custom/jquery-ui.min.js"></script>
+        <script src="../js/lib/jquery.ui.touch-punch.min.js"></script>
+        <!-- customs style sheets and scripts -->
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/jCompraExacta.js"></script>         
+        
+        <title>Aprendiendo sobre el dinero - COMPRA EXACTA</title>
+    </head>
+    <body>
+    	<!--Pag. principal de juego compra exacta: inicio -->
+		<div id="index-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-index-bg-container" class="page-background">
+	    			<img id="ce-index-vaca-img-1" class="ce-vaca-img" src="../img/vaca-neutral-pos1.png" />
+	    			<img id="ce-index-vaca-img-2" class="ce-vaca-img" src="../img/vaca-neutral-pos2.png" />
+	    			<img id="ce-vaca-bolso-img" src="../img/ce-intro-vaca-bolso.png" />
+	    			<div id="ce-index-dialog-0" class="dialog dialog-small-up">
+		    			<div id="ce-index-dialog-0-txt" class="dialog-txt">
+	                        <span class="dialog-intext">TOCA SOBRE EL <strong>KIOSCO</strong> PARA EMPEZAR A COMPRAR</span>
+	                    </div>
+                   </div>
+                   <div class="kiosco"></div>                   
+                   <a id="m-btn-ce-i" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                   <a id="hm-btn-ce-i" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+            	</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego compra exacta: fin -->
+    	
+    	<!--Pag. de nivel superado: inicio -->
+		<div id="ns-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-ns-bg-container" class="page-background">
+	    			<div id="ns-back-ce" class="ns-btn back"></div>
+					<div id="ns-sig-ce" class="ns-btn sig"></div>
+					<a id="m-btn-ce-ns" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>					
+            	</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. de nivel superado: fin -->
+    	
+    	<!--Nivel 1 - Juego compra exacta: inicio -->
+		<div id="b1-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-b1-bg-container" class="page-background">
+	    			<img id="ce-b1-vaca-img-1" class="ce-vaca-img" src="../img/vaca-neutral-pos1.png" />
+	    			<img id="ce-b1-vaca-img-2" class="ce-vaca-img" src="../img/vaca-neutral-pos2.png" />
+	    			<img class="nivel-actual" src="../img/btn/1-on.png" />
+	    			<div id="ce-b1-dialog-0" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b1-dialog-0-txt" class="dialog-txt">
+                        	<span>&iquest;QU&Eacute; SE PUEDE COMPRAR CON ESTE BILLETE <strong>SIN RECIBIR VUELTO</strong>?</span>
+                		</div>	
+                    </div>
+	    			<div id="ce-banner-b1" class="ce-banner">
+    					<div id="ce-b1-estante" class="estante">    						
+    						<div class="estante-int">
+    							<div id="ce-b1-prod-a" class="piso p-arriba p-izq">
+    								<div class="producto">
+    									<img id="ce-b1-p-a" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+    								</div>
+	    							<div id="ce-b1-p-a" class="precio precio-arr"><span></span></div>
+    							</div>
+    							<div id="ce-b1-prod-b" class="piso p-arriba p-der">
+    								<div class="producto">
+    									<img id="ce-b1-p-b" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    							</div>
+	    							<div id="ce-b1-p-b" class="precio precio-arr"><span></span></div>
+    							</div>
+    							<div id="ce-b1-prod-c" class="piso p-abajo p-izq">
+    								<div class="producto">
+    									<img id="ce-b1-p-c" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+    								</div>
+	    							<div id="ce-b1-p-c" class="precio precio-abj"><span></span></div>
+    							</div>
+    							<div id="ce-b1-prod-d" class="piso p-abajo p-der">
+    								<div class="producto">
+    									<img id="ce-b1-p-d" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+    								</div>
+	    							<div id="ce-b1-p-d" class="precio precio-abj"><span></span></div>
+    							</div>
+    						</div>    						
+    					</div>
+    					<img id="ce-b1-bill" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>    					
+    				</div>
+    				<a id="b-b1" class="btn b-btn-on b-btn-pos" href="#index-compra-e"></a>
+    				<a id="s-b1" class="btn s-btn-on s-btn-pos" href="#b2-compra-e"></a>
+    				<div id="s-b1-off" class="btn s-btn-off s-btn-pos off"></div>
+    				<a id="m-btn-ce-b1" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+    				<img class="btn ir-nivel" src="../img/btn/ir-a-nivel.png"/>
+    				<a id="1-b1" class="btn one-btn-on one-btn-pos" href="#b1-compra-e"></a>
+    				<a id="2-b1" class="btn two-btn-on two-btn-pos" href="#b2-compra-e"></a>
+    				<div id="2-b1-off" class="btn two-btn-off two-btn-pos off"></div>
+    				<a id="3-b1" class="btn three-btn-on three-btn-pos" href="#b3-compra-e"></a>
+    				<div id="3-b1-off" class="btn three-btn-off three-btn-pos off"></div>
+    				<a id="4-b1" class="btn four-btn-on four-btn-pos" href="#b4-compra-e"></a>
+    				<div id="4-b1-off" class="btn four-btn-off four-btn-pos off"></div>
+    				<a id="5-b1" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
+    				<div id="5-b1-off" class="btn five-btn-off five-btn-pos off"></div>
+    				<a id="6-b1" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
+    				<div id="6-b1-off" class="btn six-btn-off six-btn-pos off"></div>    				
+    				<a id="hm-btn-ce-b1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+            	</div>
+    		</div>    		
+    	</div>
+    	<!--Nivel 1 - Juego compra exacta: fin -->
+    	
+    	<!--Nivel 2 - Juego compra exacta: inicio -->
+		<div id="b2-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-b2-bg-container" class="page-background">
+	    			<img id="ce-b2-vaca-img-1" class="ce-vaca-img" src="../img/vaca-neutral-pos1.png" />
+	    			<img id="ce-b2-vaca-img-2" class="ce-vaca-img" src="../img/vaca-neutral-pos2.png" />
+	    			<img class="nivel-actual" src="../img/btn/2-on.png" />
+	    			<div id="ce-b2-dialog-0" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b2-dialog-0-txt" class="dialog-txt">
+                        	<span>&iquest;QU&Eacute; BILLETE NECESITO PARA COMPRAR ESTA GOLOSINA <strong>SIN RECIBIR VUELTO</strong>?</span>
+                        </div>
+                    </div>
+	    			<div id="ce-banner-b2" class="ce-banner">
+    					<div id="ce-b2-producto">
+							<img id="ce-b2-p" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+						</div>
+						<div id="ce-b2-precio-bg"><div id="ce-b2-precio"><span></span></div></div>
+						<div id="bill-opc-a" class="bill-opc">
+    						<img id="ce-b2-bill-a" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+    					</div>
+    					<div id="bill-opc-b" class="bill-opc">
+    						<img id="ce-b2-bill-b" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+    					</div>
+    					<div id="bill-opc-c" class="bill-opc">
+    						<img id="ce-b2-bill-c" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+						</div>    					
+    				</div>
+    				<a id="b-b2" class="btn b-btn-on b-btn-pos" href="#b1-compra-e"></a>
+    				<a id="s-b2" class="btn s-btn-on s-btn-pos" href="#b3-compra-e"></a>
+    				<div id="s-b2-off" class="btn s-btn-off s-btn-pos off"></div>
+    				<a id="m-btn-ce-b2" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+    				<img class="btn ir-nivel" src="../img/btn/ir-a-nivel.png"/>
+    				<a id="1-b2" class="btn one-btn-on one-btn-pos" href="#b1-compra-e"></a>
+    				<div id="1-b2-off" class="btn one-btn-off one-btn-pos off"></div>
+    				<a id="2-b2" class="btn two-btn-on two-btn-pos" href="#b2-compra-e"></a>
+    				<a id="3-b2" class="btn three-btn-on three-btn-pos" href="#b3-compra-e"></a>
+    				<div id="3-b2-off" class="btn three-btn-off three-btn-pos off"></div>
+    				<a id="4-b2" class="btn four-btn-on four-btn-pos" href="#b4-compra-e"></a>
+    				<div id="4-b2-off" class="btn four-btn-off four-btn-pos off"></div>
+    				<a id="5-b2" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
+    				<div id="5-b2-off" class="btn five-btn-off five-btn-pos off"></div>
+    				<a id="6-b2" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
+    				<div id="6-b2-off" class="btn six-btn-off six-btn-pos off"></div>    				
+    				<a id="hm-btn-ce-b1" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+            	</div>
+    		</div>    		
+    	</div>
+    	<!--Nivel 2 - Juego compra exacta: fin -->
+    	
+    	<!--Nivel 3 - Juego compra exacta: inicio -->
+		<div id="b3-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-b3-bg-container" class="page-background">
+	    			<img id="ce-b3-vaca-img-1" class="ce-vaca-img" src="../img/vaca-neutral-pos1.png" />
+	    			<img id="ce-b3-vaca-img-2" class="ce-vaca-img" src="../img/vaca-neutral-pos2.png" />
+	    			<img class="nivel-actual" src="../img/btn/3-on.png" />
+	    			<div id="ce-b3-dialog-0" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b3-dialog-0-txt" class="dialog-txt">
+                        	<span>&iquest;ME SIRVE ESTE BILLETE PARA COMPRAR ESTA GOLOSINA <strong>SIN RECIBIR VUELTO</strong>?</span>
+                    	</div>
+                    </div>
+	    			<div id="ce-banner-b3" class="ce-banner">
+    					<div id="b3-producto">
+							<img id="ce-b3-p" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+						</div>
+						<div id="ce-b3-precio-bg"><div id="ce-b3-precio"><span></span></div></div>
+						<div id="b3-bill">
+    						<img id="ce-b3-bill" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+    					</div>
+    					<div class="sino-opt opt-izq">
+    						<img id="ce-b3-si" class="fp-h fp-w" src="../img/btn/si-btn.png"/>
+    					</div>
+    					<div class="sino-opt opt-der">
+    						<img id="ce-b3-no" class="fp-h fp-w" src="../img/btn/no-btn.png"/>
+    					</div>    					    					    					
+    				</div>
+    				<a id="b-b3" class="btn b-btn-on b-btn-pos" href="#b2-compra-e"></a>
+					<a id="s-b3" class="btn s-btn-on s-btn-pos" href="#b4-compra-e"></a>
+					<div id="s-b3-off" class="btn s-btn-off s-btn-pos off"></div>
+					<a id="m-btn-ce-b3" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+					<img class="btn ir-nivel" src="../img/btn/ir-a-nivel.png"/>
+					<a id="1-b3" class="btn one-btn-on one-btn-pos" href="#b1-compra-e"></a>
+					<div id="1-b3-off" class="btn one-btn-off one-btn-pos off"></div>
+					<a id="2-b3" class="btn two-btn-on two-btn-pos" href="#b2-compra-e"></a>
+					<div id="2-b3-off" class="btn two-btn-off two-btn-pos off"></div>
+					<a id="3-b3" class="btn three-btn-on three-btn-pos" href="#b3-compra-e"></a>
+					<a id="4-b3" class="btn four-btn-on four-btn-pos" href="#b4-compra-e"></a>
+					<div id="4-b3-off" class="btn four-btn-off four-btn-pos off"></div>
+					<a id="5-b3" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
+					<div id="5-b3-off" class="btn five-btn-off five-btn-pos off"></div>
+					<a id="6-b3" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
+					<div id="6-b3-off" class="btn six-btn-off six-btn-pos off"></div>    				
+					<a id="hm-btn-ce-b3" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+            	</div>
+    		</div>    		
+    	</div>
+    	<!--Nivel 3 - Juego compra exacta: fin -->
+    	
+    	<!--Nivel 4 - Juego compra exacta: inicio -->
+		<div id="b4-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-b4-bg-container" class="page-background">
+	    			<img id="ce-b4-vaca-img-1" class="ce-vaca-compra-img" src="../img/vaca-compra-pos1.png" />
+	    			<img id="ce-b4-vaca-img-2" class="ce-vaca-compra-img" src="../img/vaca-compra-pos2.png" />
+	    			<img class="nivel-actual" src="../img/btn/4-on.png" />
+	    			<div id="ce-b4-dialog-0" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b4-dialog-0-txt" class="dialog-txt">
+                        	<span>ARRASTRA A LA BOLSA <strong>1</strong> GOLOSINA QUE TE GUSTAR&Iacute;A COMPRAR</span>
+                		</div>	
+                    </div>
+                    <div id="ce-b4-dialog-1" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b4-dialog-1-txt" class="dialog-txt">
+                        	<span>AHORA USA ESTAS MONEDAS PARA PAGAR</span>
+                		</div>	
+                    </div>
+                    <div id="ce-b4-dialog-2" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b4-dialog-2-txt" class="dialog-txt">
+                        	<span>VAMOS, <strong>INTENTALO OTRA VEZ</strong>. TU PAGO DEBE SER EL MISMO QUE EL COSTO DE TU COMPRA.</span>
+                		</div>	
+                    </div> 
+                    <div id="ce-ddlc-b4" class="drag-drop-limit-container">                   
+		    			<div id="ce-banner-b4" class="ce-banner">
+	    					<div id="ce-b4-estante" class="estante">    						
+	    						<div class="estante-int">
+	    							<div id="ce-b4-prod-a" class="piso p-arriba p-izq" data-origtop="0%" data-origleft="0%">
+	    								<div class="producto">
+	    									<img id="ce-b4-p-a" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b4-p-a" class="precio precio-arr"><span></span></div>
+	    							</div>
+	    							<div id="ce-b4-prod-b" class="piso p-arriba p-der" data-origtop="0%" data-origleft="50%">
+	    								<div class="producto">
+	    									<img id="ce-b4-p-b" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    							</div>
+		    							<div id="ce-b4-p-b" class="precio precio-arr"><span></span></div>
+	    							</div>
+	    							<div id="ce-b4-prod-c" class="piso p-abajo p-izq" data-origtop="50%" data-origleft="0%">
+	    								<div class="producto">
+	    									<img id="ce-b4-p-c" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b4-p-c" class="precio precio-abj"><span></span></div>
+	    							</div>
+	    							<div id="ce-b4-prod-d" class="piso p-abajo p-der" data-origtop="50%" data-origleft="50%">
+	    								<div class="producto">
+	    									<img id="ce-b4-p-d" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b4-p-d" class="precio precio-abj"><span></span></div>
+	    							</div>
+	    						</div>    						
+	    					</div>
+	    					<div id="ce-b4-compra-1" class="prod-bolsa bolsa-med"></div>
+	    					<img id="ce-b4-mon-1" class="mon-pago mon-pago-pos1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b4-mon-2" class="mon-pago mon-pago-pos2" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b4-mon-3" class="mon-pago mon-pago-pos3" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b4-mon-4" class="mon-pago mon-pago-pos4" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b4-mon-5" class="mon-pago mon-pago-pos5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b4-mon-6" class="mon-pago mon-pago-pos6" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<div id="ce-b4-caja-reg" class="caja-reg">
+	    						<div id="ce-b4-cr-txt" class="cr-pago"><span>$ 0</span></div>
+	    					</div>
+	    					<img id="ce-b4-pagar" class="pagar-btn" src="../img/btn/pagar.png"/>
+							<img id="ce-b4-listo" class="listo-btn" src="../img/btn/listo.png"/>	    					    					
+	    				</div>
+    				</div>
+    				<a id="b-b4" class="btn b-btn-on b-btn-pos" href="#b3-compra-e"></a>
+					<a id="s-b4" class="btn s-btn-on s-btn-pos" href="#b5-compra-e"></a>
+					<div id="s-b4-off" class="btn s-btn-off s-btn-pos off"></div>
+					<a id="m-btn-ce-b4" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+					<img class="btn ir-nivel" src="../img/btn/ir-a-nivel.png"/>
+					<a id="1-b4" class="btn one-btn-on one-btn-pos" href="#b1-compra-e"></a>
+					<div id="1-b4-off" class="btn one-btn-off one-btn-pos off"></div>
+					<a id="2-b4" class="btn two-btn-on two-btn-pos" href="#b2-compra-e"></a>
+					<div id="2-b4-off" class="btn two-btn-off two-btn-pos off"></div>
+					<a id="3-b4" class="btn three-btn-on three-btn-pos" href="#b3-compra-e"></a>
+					<div id="3-b4-off" class="btn three-btn-off three-btn-pos off"></div>
+					<a id="4-b4" class="btn four-btn-on four-btn-pos" href="#b4-compra-e"></a>
+					<div id="4-b4-off" class="btn four-btn-off four-btn-pos off"></div>
+					<a id="5-b4" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
+					<div id="5-b4-off" class="btn five-btn-off five-btn-pos off"></div>
+					<a id="6-b4" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
+					<div id="6-b4-off" class="btn six-btn-off six-btn-pos off"></div>    				
+					<a id="hm-btn-ce-b4" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Nivel 4 - Juego compra exacta: fin -->
+    	
+    	<!--Nivel 5 - Juego compra exacta: inicio -->
+		<div id="b5-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-b5-bg-container" class="page-background">
+	    			<img id="ce-b5-vaca-img-1" class="ce-vaca-compra-img" src="../img/vaca-compra-pos1.png" />
+	    			<img id="ce-b5-vaca-img-2" class="ce-vaca-compra-img" src="../img/vaca-compra-pos2.png" />
+	    			<img class="nivel-actual" src="../img/btn/5-on.png" />
+	    			<div id="ce-b5-dialog-0" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b5-dialog-0-txt" class="dialog-txt">
+                        	<span>ARRASTRA A LA BOLSA <strong>2</strong> GOLOSINAS QUE TE GUSTAR&Iacute;A COMPRAR</span>
+                		</div>	
+                    </div>
+                    <div id="ce-b5-dialog-1" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b5-dialog-1-txt" class="dialog-txt">
+                        	<span>AHORA USA ESTOS BILLETES PARA PAGAR</span>
+                		</div>	
+                    </div>
+                    <div id="ce-b5-dialog-2" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b5-dialog-2-txt" class="dialog-txt">
+                        	<span>VAMOS, <strong>INTENTALO OTRA VEZ</strong>. TU PAGO DEBE SER EL MISMO QUE EL COSTO DE TU COMPRA.</span>
+                		</div>	
+                    </div> 
+                    <div id="ce-ddlc-b5" class="drag-drop-limit-container">                   
+		    			<div id="ce-banner-b5" class="ce-banner">
+	    					<div id="ce-b5-estante" class="estante">    						
+	    						<div class="estante-int">
+	    							<div id="ce-b5-prod-a" class="piso p-arriba p-izq" data-origtop="0%" data-origleft="0%">
+	    								<div class="producto">
+	    									<img id="ce-b5-p-a" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b5-p-a" class="precio precio-arr"><span></span></div>
+	    							</div>
+	    							<div id="ce-b5-prod-b" class="piso p-arriba p-der" data-origtop="0%" data-origleft="50%">
+	    								<div class="producto">
+	    									<img id="ce-b5-p-b" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    							</div>
+		    							<div id="ce-b5-p-b" class="precio precio-arr"><span></span></div>
+	    							</div>
+	    							<div id="ce-b5-prod-c" class="piso p-abajo p-izq" data-origtop="50%" data-origleft="0%">
+	    								<div class="producto">
+	    									<img id="ce-b5-p-c" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b5-p-c" class="precio precio-abj"><span></span></div>
+	    							</div>
+	    							<div id="ce-b5-prod-d" class="piso p-abajo p-der" data-origtop="50%" data-origleft="50%">
+	    								<div class="producto">
+	    									<img id="ce-b5-p-d" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b5-p-d" class="precio precio-abj"><span></span></div>
+	    							</div>
+	    						</div>    						
+	    					</div>
+	    					<div id="ce-b5-compra-1" class="prod-bolsa bolsa-arr"></div>
+	    					<div id="ce-b5-compra-2" class="prod-bolsa bolsa-abj"></div>
+		    				<img id="ce-b5-mon-1" class="bill-pago bill-pago-pos1" src="../img/bill/2f-s.png" />
+	    					<img id="ce-b5-mon-2" class="bill-pago bill-pago-pos2" src="../img/bill/2f-s.png" />
+	    					<img id="ce-b5-mon-3" class="bill-pago bill-pago-pos3" src="../img/bill/2f-s.png" />
+	    					<img id="ce-b5-mon-4" class="bill-pago bill-pago-pos4" src="../img/bill/2f-s.png" />
+	    					<img id="ce-b5-mon-5" class="bill-pago bill-pago-pos5" src="../img/bill/2f-s.png" />
+	    					<img id="ce-b5-mon-6" class="bill-pago bill-pago-pos6" src="../img/bill/2f-s.png" />
+	    					<div id="ce-b5-caja-reg" class="caja-reg">
+	    						<div id="ce-b5-cr-txt" class="cr-pago"><span>$ 0</span></div>
+	    					</div>
+	    					<img id="ce-b5-pagar" class="pagar-btn" src="../img/btn/pagar.png"/>
+							<img id="ce-b5-listo" class="listo-btn" src="../img/btn/listo.png"/>	    					    					
+	    				</div>
+    				</div>
+    				<a id="b-b5" class="btn b-btn-on b-btn-pos" href="#b4-compra-e"></a>
+					<a id="s-b5" class="btn s-btn-on s-btn-pos" href="#b6-compra-e"></a>
+					<div id="s-b5-off" class="btn s-btn-off s-btn-pos off"></div>
+					<a id="m-btn-ce-b5" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+					<img class="btn ir-nivel" src="../img/btn/ir-a-nivel.png"/>
+					<a id="1-b5" class="btn one-btn-on one-btn-pos" href="#b1-compra-e"></a>
+					<div id="1-b5-off" class="btn one-btn-off one-btn-pos off"></div>
+					<a id="2-b5" class="btn two-btn-on two-btn-pos" href="#b2-compra-e"></a>
+					<div id="2-b5-off" class="btn two-btn-off two-btn-pos off"></div>
+					<a id="3-b5" class="btn three-btn-on three-btn-pos" href="#b3-compra-e"></a>
+					<div id="3-b5-off" class="btn three-btn-off three-btn-pos off"></div>
+					<a id="4-b5" class="btn four-btn-on four-btn-pos" href="#b4-compra-e"></a>
+					<div id="4-b5-off" class="btn four-btn-off four-btn-pos off"></div>
+					<a id="5-b5" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
+					<a id="6-b5" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
+					<div id="6-b5-off" class="btn six-btn-off six-btn-pos off"></div>    				
+					<a id="hm-btn-ce-b5" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Nivel 5 - Juego compra exacta: fin -->
+    	
+    	
+    	<!--Nivel 6 - Juego compra exacta: inicio -->
+		<div id="b6-compra-e" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div id="ce-b6-bg-container" class="page-background">
+	    			<img id="ce-b6-vaca-img-1" class="ce-vaca-compra-img" src="../img/vaca-compra-pos1.png" />
+	    			<img id="ce-b6-vaca-img-2" class="ce-vaca-compra-img" src="../img/vaca-compra-pos2.png" />
+	    			<img class="nivel-actual" src="../img/btn/6-on.png" />
+	    			<div id="ce-b6-dialog-0" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b6-dialog-0-txt" class="dialog-txt">
+                        	<span>ARRASTRA A LA BOLSA <strong>2</strong> GOLOSINAS QUE TE GUSTAR&Iacute;A COMPRAR</span>
+                		</div>	
+                    </div>
+                    <div id="ce-b6-dialog-1" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b5-dialog-1-txt" class="dialog-txt">
+                        	<span>AHORA USA ESTOS BILLETES Y MONEDAS PARA PAGAR</span>
+                		</div>	
+                    </div>
+                    <div id="ce-b6-dialog-2" class="dialog ce-dialog dialog-small-up">
+                        <div id="ce-b5-dialog-2-txt" class="dialog-txt">
+                        	<span>VAMOS, <strong>INTENTALO OTRA VEZ</strong>. TU PAGO DEBE SER EL MISMO QUE EL COSTO DE TU COMPRA.</span>
+                		</div>	
+                    </div> 
+                    <div id="ce-ddlc-b6" class="drag-drop-limit-container">                   
+		    			<div id="ce-banner-b6" class="ce-banner">
+	    					<div id="ce-b6-estante" class="estante">    						
+	    						<div class="estante-int">
+	    							<div id="ce-b6-prod-a" class="piso p-arriba p-izq" data-origtop="0%" data-origleft="0%">
+	    								<div class="producto">
+	    									<img id="ce-b6-p-a" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b6-p-a" class="precio precio-arr"><span></span></div>
+	    							</div>
+	    							<div id="ce-b6-prod-b" class="piso p-arriba p-der" data-origtop="0%" data-origleft="50%">
+	    								<div class="producto">
+	    									<img id="ce-b6-p-b" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+		    							</div>
+		    							<div id="ce-b6-p-b" class="precio precio-arr"><span></span></div>
+	    							</div>
+	    							<div id="ce-b6-prod-c" class="piso p-abajo p-izq" data-origtop="50%" data-origleft="0%">
+	    								<div class="producto">
+	    									<img id="ce-b6-p-c" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b6-p-c" class="precio precio-abj"><span></span></div>
+	    							</div>
+	    							<div id="ce-b6-prod-d" class="piso p-abajo p-der" data-origtop="50%" data-origleft="50%">
+	    								<div class="producto">
+	    									<img id="ce-b6-p-d" class="fp-h fp-w" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+	    								</div>
+		    							<div id="ce-b6-p-d" class="precio precio-abj"><span></span></div>
+	    							</div>
+	    						</div>    						
+	    					</div>
+	    					<div id="ce-b6-compra-1" class="prod-bolsa bolsa-arr"></div>
+	    					<div id="ce-b6-compra-2" class="prod-bolsa bolsa-abj"></div>
+		    				<img id="ce-b6-mon-1" class="pago-comb" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b6-mon-2" class="pago-comb" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b6-mon-3" class="pago-comb" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b6-mon-4" class="pago-comb" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b6-mon-5" class="pago-comb" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<img id="ce-b6-mon-6" class="pago-comb" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+	    					<div id="ce-b6-caja-reg" class="caja-reg">
+	    						<div id="ce-b6-cr-txt" class="cr-pago"><span>$ 0</span></div>
+	    					</div>
+	    					<img id="ce-b6-pagar" class="pagar-btn" src="../img/btn/pagar.png"/>
+							<img id="ce-b6-listo" class="listo-btn" src="../img/btn/listo.png"/>	    					    					
+	    				</div>
+    				</div>
+    				<a id="b-b6" class="btn b-btn-on b-btn-pos" href="#b5-compra-e"></a>
+					<a id="m-btn-ce-b6" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+					<img class="btn ir-nivel" src="../img/btn/ir-a-nivel.png"/>
+					<a id="1-b6" class="btn one-btn-on one-btn-pos" href="#b1-compra-e"></a>
+					<div id="1-b6-off" class="btn one-btn-off one-btn-pos off"></div>
+					<a id="2-b6" class="btn two-btn-on two-btn-pos" href="#b2-compra-e"></a>
+					<div id="2-b6-off" class="btn two-btn-off two-btn-pos off"></div>
+					<a id="3-b6" class="btn three-btn-on three-btn-pos" href="#b3-compra-e"></a>
+					<div id="3-b6-off" class="btn three-btn-off three-btn-pos off"></div>
+					<a id="4-b6" class="btn four-btn-on four-btn-pos" href="#b4-compra-e"></a>
+					<div id="4-b6-off" class="btn four-btn-off four-btn-pos off"></div>
+					<a id="5-b6" class="btn five-btn-on five-btn-pos" href="#b5-compra-e"></a>
+					<div id="5-b6-off" class="btn five-btn-on five-btn-pos off"></div>
+					<a id="6-b6" class="btn six-btn-on six-btn-pos" href="#b6-compra-e"></a>
+					<a id="hm-btn-ce-b5" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Nivel 6 - Juego compra exacta: fin -->
+    	
+       	<script type="text/javascript">
+            app.loadApp();
+            compraExacta.initialize();
+        </script>
+    </body>
+</html>

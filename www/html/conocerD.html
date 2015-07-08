@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+    	<!-- config -->
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- libraries -->
+        <script type="text/javascript" src="js/cordova.js"></script>
+        <link rel="stylesheet" href="../js/lib/jqm/jquery.mobile-1.4.3.min.css" />
+        <script type="text/javascript" src="../js/lib/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="../js/lib/jqm/jquery.mobile-1.4.3.min.js"></script>
+        <script src="../js/lib/jquery.textfill.min.js"></script>        
+        <!-- customs style sheets and scripts -->
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
+		<script type="text/javascript" src="../js/jConocerDinero.js"></script> 		
+        
+        <title>Aprendiendo sobre el dinero - CONOCER DINERO</title>
+    </head>
+    <body>
+    	<!--Pag. principal de juego para conocer el dinero: inicio -->
+		<div id="index-conocer-d" data-role="page"  >
+			<div data-role="content" class="fullscreen">
+    			<div id="cd-index-bg-container" class="page-background">
+	    			<img id="cd-index-vaca-1" class="vaca-brazos-diag" src="../img/sj-vaca-pos1.png" />
+	    			<img id="cd-index-vaca-2" class="vaca-brazos-diag" src="../img/sj-vaca-pos2.png" />
+					<div id="cd-i-dialog-0" class="dialog dialog-small-up">
+						<div id="cd-i-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN LA ARGENTINA USAMOS <strong>EL PESO</strong>, PODEMOS PAGAR CON MONEDAS O BILLETES
+							</span>
+						</div>
+					</div>
+					<div id="cd-i-dialog-1" class="dialog dialog-small-up">
+						<div id="cd-i-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								&nbsp;&nbsp;&nbsp;&nbsp;¿VAMOS A CONOCERLOS?&nbsp;&nbsp;&nbsp;&nbsp;								
+							</span>
+						</div>
+					</div>
+					<div id="cm-link" >
+						<a href="#index-conocer-m" class="fp-h fp-w" data-transition="none" ><img src="../img/scd-monedas.png" class="fp-h fp-w"/></a>						
+					</div>
+					<div id="cb-link" >
+						<a href="#index-conocer-b" class="fp-h fp-w" data-transition="none" ><img src="../img/scd-billetes.png" class="fp-h fp-w"/></a>
+					</div>
+				</div>
+				<a id="m-btn-cd-i" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+				<a id="hm-btn-cd" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer el dinero: fin -->
+    	
+    	<!--Pag. principal de juego para conocer las monedas: inicio -->
+		<div id="index-conocer-m" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cm-bg-container" >
+	    			<img id="cm-index-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+	    			<img id="cm-index-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+					<div id="cm-i-dialog-0" class="dialog dialog-small-up">
+						<div id="cm-i-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								LAS MONEDAS SON UN TIPO DE DINERO QUE TIENEN <strong>MENOR</strong> VALOR QUE LOS BILLETES.
+							</span>
+						</div>
+					</div>
+					<div id="cm-i-dialog-1" class="dialog dialog-small-up">
+						<div id="cm-i-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTAS SON LAS MONEDAS DE LA ARGENTINA <br/>¿VAMOS A CONOCERLAS?								
+							</span>
+						</div>
+					</div>					
+					<div class="cm-b-banner">
+						<div id="cm-2pe" class="mon-banner" >
+							<a href="#conocer-m-2pe" class="fp-h fp-w" data-transition="none" ><img src="../img/mon/2.png" class="fp-h fp-w" /></a>						
+						</div>
+						<div id="cm-1pe" class="mon-banner" >
+							<a href="#conocer-m-1pe" class="fp-h fp-w" data-transition="none" ><img src="../img/mon/1.png" class="fp-h fp-w"/></a>
+						</div>
+						<div id="cm-50ctv" class="mon-banner" >
+							<a href="#conocer-m-50ctv" class="fp-h fp-w" data-transition="none"><img src="../img/mon/50.png" class="fp-h fp-w"/></a>						
+						</div>
+						<div id="cm-25ctv" class="mon-banner" >
+							<a href="#conocer-m-25ctv" class="fp-h fp-w" data-transition="none"><img src="../img/mon/25.png" class="fp-h fp-w" /></a>
+						</div>
+						<div id="cm-10ctv" class="mon-banner" >
+							<a href="#conocer-m-10ctv" class="fp-h fp-w" data-transition="none"><img src="../img/mon/10.png" class="fp-h fp-w" /></a>						
+						</div>
+						<div id="cm-5ctv" class="mon-banner" >
+							<a href="#conocer-m-5ctv" class="fp-h fp-w" data-transition="none"><img src="../img/mon/5.png" class="fp-h fp-w" /></a>						
+						</div>
+					</div>
+				<a id="m-btn-cm-i" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+				<a id="b-btn-cm-i" class="btn b-btn-on b-btn-pos " href="#index-conocer-d"></a>
+				<a id="hm-btn-cm-i" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+				</div>
+    		</div>    		   		
+    	</div>
+    	<!--Pag. principal de juego para conocer las monedas: fin -->
+    	
+    	<!--Pag. principal de juego para conocer los billetes: inicio -->
+		<div id="index-conocer-b" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cb-bg-container">
+	    			<img id="cb-index-vaca-1" class="cb-vaca-img" src="../img/cb-menu-vaca-pos1.png" />
+	    			<img id="cb-index-vaca-2" class="cb-vaca-img" src="../img/cb-menu-vaca-pos2.png" />
+					<div id="cb-i-dialog-0" class="dialog dialog-small-up">
+						<div id="cb-i-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								LOS BILLETES SON UN TIPO DE DINERO QUE TIENEN <strong>MAYOR</strong> VALOR QUE LAS MONEDAS
+							</span>
+						</div>
+					</div>
+					<div id="cb-i-dialog-1" class="dialog dialog-small-up">
+						<div id="cb-i-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTOS SON LOS BILLETES DE LA ARGENTINA <br/>¿VAMOS A CONOCERLOS?
+							</span>
+						</div>
+					</div>
+					<div class="cm-b-banner">
+						<div id="cb-2pe" class="bill-banner" >
+							<a href="#conocer-b-2pe" class="fp-h fp-w" ><img src="../img/bill/2f-s.png" class="fp-h fp-w"/></a>						
+						</div>
+						<div id="cb-5pe" class="bill-banner" >
+							<a href="#conocer-b-5pe" class="fp-h fp-w" ><img src="../img/bill/5f-s.png" class="fp-h fp-w"/></a>
+						</div>
+						<div id="cb-10pe" class="bill-banner" >
+							<a href="#conocer-b-10pe" class="fp-h fp-w" ><img src="../img/bill/10f-s.png" class="fp-h fp-w"/></a>						
+						</div>
+						<div id="cb-20pe" class="bill-banner" >
+							<a href="#conocer-b-20pe" class="fp-h fp-w" ><img src="../img/bill/20f-s.png" class="fp-h fp-w" /></a>
+						</div>
+						<div id="cb-50pe" class="bill-banner" >
+							<a href="#conocer-b-50pe" class="fp-h fp-w" ><img src="../img/bill/50f-s.png" class="fp-h fp-w" /></a>						
+						</div>
+						<div id="cb-100pe" class="bill-banner" >
+							<a href="#conocer-b-100pe" class="fp-h fp-w" ><img src="../img/bill/100f-s.png" class="fp-h fp-w" /></a>						
+						</div>
+					</div>
+					<a id="m-btn-cb-i" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+					<a id="b-btn-cb-i" class="btn b-btn-on b-btn-pos " href="#index-conocer-d"></a>
+					<a id="hm-btn-cb-i" class="btn hm-btn hm-btn-pos" href="../index.html" rel="external"></a>
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer los billetes: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la moneda de 2 pesos: inicio -->
+		<div id="conocer-m-2pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cm-bg-container" >
+                    <img id="cm-2pe-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+	    			<img id="cm-2pe-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                    <div id="cm-2pe-dialog-0" class="dialog dialog-large-up">
+                        <div id="cm-2pe-dialog-0-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            ESTA ES LA MONEDA DOS PESOS.<br/>TIENE EL <strong>BORDE DORADO</strong> Y EL <strong>CENTRO PLATEADO</strong>
+	                        </span>
+	                    </div>
+                    </div>
+                    <div id="cm-2pe-dialog-1" class="dialog dialog-small-up">
+                        <div id="cm-2pe-dialog-1-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            $2 - DOS PESOS <br/> PARTE DE ATR&Aacute;S
+	                        </span>
+                        </div>
+                    </div>
+                    <div id="cm-2pe-dialog-2" class="dialog dialog-small-up">
+                        <div id="cm-2pe-dialog-2-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            $2 - DOS PESOS <br/> PARTE DE FRENTE
+	                        </span>
+	                    </div>
+                    </div>                  
+                    <div class="cm-b-banner">
+                        <div id="cm-2pe-front" class="mon-banner mon-grande" ></div>
+                        <div id="cm-2pe-back" class="mon-banner mon-grande" ></div>
+                        <div id="cm-2pe-h1" class="mon-banner mon-grande" ></div>
+                        <div id="cm-2pe-h2" class="mon-banner mon-grande" ></div>                        
+                    </div>
+                    <a id="m-btn-cm-2" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cm-2" class="btn b-btn-on b-btn-pos" href="#index-conocer-m"></a>
+                    <a id="hm-btn-cm-2" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+                </div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la moneda de 2 pesos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la moneda de 1 peso: inicio -->
+		<div id="conocer-m-1pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cm-bg-container" >
+                    <img id="cm-1pe-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+	    			<img id="cm-1pe-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                    <div id="cm-1pe-dialog-0" class="dialog dialog-large-up">
+                        <div id="cm-1pe-dialog-0-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            ESTA ES LA MONEDA DE UN PESO.<br/>TIENE EL <strong>BORDE PLATEADO</strong> Y EL <strong>CENTRO DORADO</strong>
+	                        </span>
+	                    </div>
+                    </div>
+                    <div id="cm-1pe-dialog-1" class="dialog dialog-small-up">
+                        <div id="cm-1pe-dialog-1-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            $1 - UN PESO <br/> PARTE DE ATR&Aacute;S
+	                        </span>
+	                    </div>
+                    </div> 
+                    <div id="cm-1pe-dialog-2" class="dialog dialog-small-up">
+                        <div id="cm-1pe-dialog-2-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                        	$1 - UN PESO <br/> PARTE DE FRENTE
+                        	</span>
+                        </div>
+                    </div>                 
+                    <div class="cm-b-banner">
+                        <div id="cm-1pe-front" class="mon-banner mon-grande" ></div>
+                        <div id="cm-1pe-back" class="mon-banner mon-grande" ></div>
+                        <div id="cm-1pe-h1" class="mon-banner mon-grande" ></div>
+                        <div id="cm-1pe-h2" class="mon-banner mon-grande" ></div>                        
+                    </div>
+                    <a id="m-btn-cm-1" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cm-1" class="btn b-btn-on b-btn-pos" href="#index-conocer-m"></a>
+                    <a id="hm-btn-cm-1" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+                </div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la moneda de 1 peso: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la moneda de 50 centavos: inicio -->
+		<div id="conocer-m-50ctv" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cm-bg-container" >
+                    <img id="cm-50c-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+	    			<img id="cm-50c-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                    <div id="cm-50c-dialog-0" class="dialog dialog-small-up">
+                        <div id="cm-50c-dialog-0-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            ESTA ES LA MONEDA DE 50 CENTAVOS.<br /> ES DE <strong>COLOR DORADO</strong>
+	                        </span>
+                        </div>
+                    </div>
+                    <div id="cm-50c-dialog-1" class="dialog dialog-small-up">
+                        <div id="cm-50c-dialog-1-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            50 &#162; - CINCUENTA CENTAVOS <br/> PARTE DE ATR&Aacute;S
+	                        </span>
+                        </div>
+                    </div> 
+                    <div id="cm-50c-dialog-2" class="dialog dialog-small-up">
+                        <div id="cm-50c-dialog-2-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            50 &#162; - CINCUENTA CENTAVOS <br/> PARTE DE FRENTE
+	                        </span>
+                        </div>
+                    </div>                                      
+                    <div class="cm-b-banner">
+                        <div id="cm-50c-front" class="mon-banner mon-grande" ></div>
+                        <div id="cm-50c-back" class="mon-banner mon-grande" ></div>                                                
+                    </div>
+                    <a id="m-btn-cm-50" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cm-50" class="btn b-btn-on b-btn-pos" href="#index-conocer-m"></a>
+                    <a id="hm-btn-cm-50" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>                    
+                </div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la moneda de 50 centavos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la moneda de 25 centavos: inicio -->
+		<div id="conocer-m-25ctv" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cm-bg-container" >
+                    <img id="cm-25c-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+	    			<img id="cm-25c-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                    <div id="cm-25c-dialog-0" class="dialog dialog-small-up">
+                        <div id="cm-25c-dialog-0-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            ESTA ES LA MONEDA DE 25 CENTAVOS.<br /> ES DE <strong>COLOR PLATEADO</strong>
+	                        </span>
+                        </div>
+                    </div>
+                    <div id="cm-25c-dialog-1" class="dialog dialog-small-up">
+                        <div id="cm-25c-dialog-1-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            25 &#162; - VEINTICINCO CENTAVOS <br/> PARTE DE ATR&Aacute;S
+	                        </span>
+                        </div>
+                    </div> 
+                    <div id="cm-25c-dialog-2" class="dialog dialog-small-up">
+                        <div id="cm-25c-dialog-2-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            25 &#162; - VEINTICINCO CENTAVOS <br/> PARTE DE FRENTE
+	                        </span>
+                        </div>
+                    </div>                                      
+                    <div class="cm-b-banner">
+                        <div id="cm-25c-front" class="mon-banner mon-grande" ></div>
+                        <div id="cm-25c-back" class="mon-banner mon-grande" ></div>                                                
+                    </div>
+                    <a id="m-btn-cm-25" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cm-25" class="btn b-btn-on b-btn-pos" href="#index-conocer-m"></a>
+                    <a id="hm-btn-cm-25" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+                </div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la moneda de 25 centavos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la moneda de 10 centavos: inicio -->
+		<div id="conocer-m-10ctv" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cm-bg-container" >
+                    <img id="cm-10c-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+	    			<img id="cm-10c-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                    <div id="cm-10c-dialog-0" class="dialog dialog-small-up">
+                        <div id="cm-10c-dialog-0-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            ESTA ES LA MONEDA DE 10 CENTAVOS.<br /> ES DE <strong>COLOR DORADO</strong>
+	                        </span>
+                        </div>
+                    </div>
+                    <div id="cm-10c-dialog-1" class="dialog dialog-small-up">
+                        <div id="cm-10c-dialog-1-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            10 &#162; - DIEZ CENTAVOS <br/> PARTE DE ATR&Aacute;S
+	                        </span>
+                        </div>
+                    </div>
+                    <div id="cm-10c-dialog-2" class="dialog dialog-small-up">
+                        <div id="cm-10c-dialog-2-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                        	10 &#162; - DIEZ CENTAVOS <br/> PARTE DE FRENTE
+	                        </span>
+	                    </div>
+                    </div>                  
+                    <div class="cm-b-banner">
+                        <div id="cm-10c-front" class="mon-banner mon-grande" ></div>
+                        <div id="cm-10c-back" class="mon-banner mon-grande" ></div>                                                
+                    </div>
+                    <a id="m-btn-cm-10" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cm-10" class="btn b-btn-on b-btn-pos" href="#index-conocer-m"></a>
+                    <a id="hm-btn-cm-10" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+                </div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la moneda de 10 centavos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la moneda de 5 centavos: inicio -->
+		<div id="conocer-m-5ctv" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cm-bg-container" >
+                    <img id="cm-5c-vaca-1" class="cm-vaca-img" src="../img/cm-menu-vaca-pos1.png" />
+	    			<img id="cm-5c-vaca-2" class="cm-vaca-img" src="../img/cm-menu-vaca-pos2.png" />
+                    <div id="cm-5c-dialog-0" class="dialog dialog-small-up">
+                        <div id="cm-5c-dialog-0-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            ESTA ES LA MONEDA DE 5 CENTAVOS.<br /> ES DE <strong>COLOR PLATEADO</strong>
+	                        </span>
+	                    </div>
+                    </div>
+                    <div id="cm-5c-dialog-1" class="dialog dialog-small-up">
+                        <div id="cm-5c-dialog-1-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            5 &#162; - CINCO CENTAVOS <br/> PARTE DE ATR&Aacute;S
+	                        </span>
+                        </div>
+                    </div>
+                    <div id="cm-5c-dialog-2" class="dialog dialog-small-up">
+                        <div id="cm-5c-dialog-2-txt" class="dialog-txt">
+	                        <span class="dialog-intext">
+	                            5 &#162; - CINCO CENTAVOS <br/> PARTE DE FRENTE
+	                        </span>
+                        </div>
+                    </div>
+                    <div class="cm-b-banner">
+                        <div id="cm-5c-front" class="mon-banner mon-grande" ></div>
+                        <div id="cm-5c-back" class="mon-banner mon-grande" ></div>                                                
+                    </div>
+                    <a id="m-btn-cm-5" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cm-5" class="btn b-btn-on b-btn-pos" href="#index-conocer-m"></a>
+                    <a id="hm-btn-cm-5" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+                </div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la moneda de 5 centavos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la billete de 2 pesos: inicio -->
+		<div id="conocer-b-2pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cb-bg-container">
+	    			<img id="cb-2pe-vaca-1" class="cb-vaca-img" src="../img/cb-menu-vaca-pos1.png" />
+	    			<img id="cb-2pe-vaca-2" class="cb-vaca-img" src="../img/cb-menu-vaca-pos2.png" />
+					<div id="cb-2pe-dialog-0" class="dialog dialog-small-up">
+						<div id="cb-2pe-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL BILLETE DE <strong>MENOR</strong> VALOR, ES EL DE <strong>2 PESOS</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-2pe-dialog-1" class="dialog dialog-small-up">
+						<div id="cb-2pe-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN LAS DOS PUNTAS TIENE EL N&Uacute;MERO <strong>2</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-2pe-dialog-2" class="dialog dialog-small-up">
+						<div id="cb-2pe-dialog-2-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN EL CENTRO TIENE ESCRITO<br /><strong>"DOS PESOS"</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-2pe-dialog-3" class="dialog dialog-small-up">
+						<div id="cb-2pe-dialog-3-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ES EL &Uacute;NICO BILLETE QUE VALE IGUAL QUE UNA MONEDA, LA DE 2 PESOS
+							</span>
+						</div>
+					</div>
+					<div id="cb-2pe-dialog-4" class="dialog dialog-small-up">
+						<div id="cb-2pe-dialog-4-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL <strong>OTRO LADO</strong> DEL BILLETE DE 2 PESOS
+							</span>
+						</div>
+					</div>
+					<div class="cm-b-banner">
+						<div id="cb-2pe-front" class="bill-grande" ></div>
+                        <div id="cb-2pe-back" class="bill-grande" ></div>
+                        <div id="cb-2pe-front-z1" class="bill-grande" ></div>
+                        <div id="cb-2pe-front-z2" class="bill-grande" ></div>
+                        <div id="cb-2pe-front-c" ></div>
+                        <div id="igual-2">
+                        	<div class="igual up"></div>
+                        	<div class="igual middle"></div>
+                        	<div class="igual down"></div>
+                    	</div>
+                        <div id="cb-2pe-mon-front" ></div>
+                        
+					</div>
+					<a id="m-btn-cb-2" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cb-2" class="btn b-btn-on b-btn-pos" href="#index-conocer-b"></a>
+                    <a id="hm-btn-cb-2" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+				</div>
+    			    			
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la billete de 2 pesos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la billete de 5 pesos: inicio -->
+		<div id="conocer-b-5pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cb-bg-container">
+	    			<img id="cb-5pe-vaca-1" class="cb-vaca-img" src="../img/cb-menu-vaca-pos1.png" />
+	    			<img id="cb-5pe-vaca-2" class="cb-vaca-img" src="../img/cb-menu-vaca-pos2.png" />
+					<div id="cb-5pe-dialog-0" class="dialog dialog-small-up">
+						<div id="cb-5pe-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL BILLETE DE <br/> <strong>5 PESOS</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-5pe-dialog-1" class="dialog dialog-small-up">
+						<div id="cb-5pe-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN LAS DOS PUNTAS TIENE EL N&Uacute;MERO <strong>5</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-5pe-dialog-2" class="dialog dialog-small-up">
+						<div id="cb-5pe-dialog-2-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN EL CENTRO TIENE ESCRITO <br/><strong>"CINCO PESOS"</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-5pe-dialog-3" class="dialog dialog-small-up">
+						<div id="cb-5pe-dialog-3-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL <strong>OTRO LADO</strong> DEL BILLETE DE 5 PESOS
+							</span>
+						</div>
+					</div>
+					<div class="cm-b-banner">
+						<div id="cb-5pe-front" class="bill-grande" ></div>
+                        <div id="cb-5pe-back" class="bill-grande" ></div>
+                        <div id="cb-5pe-front-z1" class="bill-grande" ></div>
+                        <div id="cb-5pe-front-z2" class="bill-grande" ></div>
+					</div>
+					<a id="m-btn-cb-5" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cb-5" class="btn b-btn-on b-btn-pos" href="#index-conocer-b"></a>
+                    <a id="hm-btn-cb-5" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>					
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la billete de 5 pesos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la billete de 10 pesos: inicio -->
+		<div id="conocer-b-10pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cb-bg-container">
+	    			<img id="cb-10pe-vaca-1" class="cb-vaca-img" src="../img/cb-menu-vaca-pos1.png" />
+	    			<img id="cb-10pe-vaca-2" class="cb-vaca-img" src="../img/cb-menu-vaca-pos2.png" />
+					<div id="cb-10pe-dialog-0" class="dialog dialog-small-up">
+						<div id="cb-10pe-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL BILLETE DE <br/> <strong>10 PESOS</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-10pe-dialog-1" class="dialog dialog-small-up">
+						<div id="cb-10pe-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN LAS DOS PUNTAS TIENE EL N&Uacute;MERO <strong>10</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-10pe-dialog-2" class="dialog dialog-small-up">
+						<div id="cb-10pe-dialog-2-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN EL CENTRO TIENE ESCRITO <br/><strong>"DIEZ PESOS"</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-10pe-dialog-3" class="dialog dialog-small-up">
+						<div id="cb-10pe-dialog-3-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL <strong>OTRO LADO</strong> DEL BILLETE DE 10 PESOS
+							</span>
+						</div>
+					</div>
+					<div class="cm-b-banner">
+						<div id="cb-10pe-front" class="bill-grande" ></div>
+                        <div id="cb-10pe-back" class="bill-grande" ></div>
+                        <div id="cb-10pe-front-z1" class="bill-grande" ></div>
+                        <div id="cb-10pe-front-z2" class="bill-grande" ></div>
+					</div>
+					<a id="m-btn-cb-10" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cb-10" class="btn b-btn-on b-btn-pos" href="#index-conocer-b"></a>
+                    <a id="hm-btn-cb-10" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la billete de 10 pesos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la billete de 20 pesos: inicio -->
+		<div id="conocer-b-20pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cb-bg-container">
+	    			<img id="cb-20pe-vaca-1" class="cb-vaca-img" src="../img/cb-menu-vaca-pos1.png" />
+	    			<img id="cb-20pe-vaca-2" class="cb-vaca-img" src="../img/cb-menu-vaca-pos2.png" />
+					<div id="cb-20pe-dialog-0" class="dialog dialog-small-up">
+						<div id="cb-20pe-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL BILLETE DE <br/> <strong>20 PESOS</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-20pe-dialog-1" class="dialog dialog-small-up">
+						<div id="cb-20pe-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN LAS DOS PUNTAS TIENE EL N&Uacute;MERO <strong>20</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-20pe-dialog-2" class="dialog dialog-small-up">
+						<div id="cb-20pe-dialog-2-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN EL CENTRO TIENE ESCRITO <br/><strong>"VEINTE PESOS"</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-20pe-dialog-3" class="dialog dialog-small-up">
+						<div id="cb-20pe-dialog-3-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL <strong>OTRO LADO</strong> DEL BILLETE DE 20 PESOS								
+							</span>
+						</div>
+					</div>
+					<div class="cm-b-banner">
+						<div id="cb-20pe-front" class="bill-grande" ></div>
+                        <div id="cb-20pe-back" class="bill-grande" ></div>
+                        <div id="cb-20pe-front-z1" class="bill-grande" ></div>
+                        <div id="cb-20pe-front-z2" class="bill-grande" ></div>
+					</div>
+					<a id="m-btn-cb-20" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cb-20" class="btn b-btn-on b-btn-pos" href="#index-conocer-b"></a>
+                    <a id="hm-btn-cb-20" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>					
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la billete de 20 pesos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la billete de 50 pesos: inicio -->
+		<div id="conocer-b-50pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cb-bg-container">
+	    			<img id="cb-50pe-vaca-1" class="cb-vaca-img" src="../img/cb-menu-vaca-pos1.png" />
+	    			<img id="cb-50pe-vaca-2" class="cb-vaca-img" src="../img/cb-menu-vaca-pos2.png" />
+					<div id="cb-50pe-dialog-0" class="dialog dialog-small-up">
+						<div id="cb-50pe-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL BILLETE DE <br/> <strong>50 PESOS</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-50pe-dialog-1" class="dialog dialog-small-up">
+						<div id="cb-50pe-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN LAS DOS PUNTAS TIENE EL N&Uacute;MERO <strong>50</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-50pe-dialog-2" class="dialog dialog-small-up">
+						<div id="cb-50pe-dialog-2-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN EL CENTRO TIENE ESCRITO <br/><strong>"CINCUENTA PESOS"</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-50pe-dialog-3" class="dialog dialog-small-up">
+						<div id="cb-50pe-dialog-3-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL <strong>OTRO LADO</strong> DEL BILLETE DE 50 PESOS
+							</span>
+						</div>
+					</div>
+					<div class="cm-b-banner">
+						<div id="cb-50pe-front" class="bill-grande" ></div>
+                        <div id="cb-50pe-back" class="bill-grande" ></div>
+                        <div id="cb-50pe-front-z1" class="bill-grande" ></div>
+                        <div id="cb-50pe-front-z2" class="bill-grande" ></div>
+					</div>
+					<a id="m-btn-cb-50" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cb-50" class="btn b-btn-on b-btn-pos" href="#index-conocer-b"></a>
+                    <a id="hm-btn-cb-50" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>					
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la billete de 50 pesos: fin -->
+    	
+    	<!--Pag. principal de juego para conocer la billete de 100 pesos: inicio -->
+		<div id="conocer-b-100pe" data-role="page" >
+			<div data-role="content" class="fullscreen">
+    			<div class="page-background cb-bg-container">
+	    			<img id="cb-100pe-vaca-1" class="cb-vaca-img" src="../img/cb-menu-vaca-pos1.png" />
+	    			<img id="cb-100pe-vaca-2" class="cb-vaca-img" src="../img/cb-menu-vaca-pos2.png" />
+					<div id="cb-100pe-dialog-0" class="dialog dialog-small-up">
+						<div id="cb-100pe-dialog-0-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL BILLETE DE <strong>MAYOR</strong> VALOR, ES EL DE <strong>100 PESOS</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-100pe-dialog-1" class="dialog dialog-small-up">
+						<div id="cb-100pe-dialog-1-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN LAS DOS PUNTAS TIENE EL N&Uacute;MERO<br/><strong>100</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-100pe-dialog-2" class="dialog dialog-small-up">
+						<div id="cb-100pe-dialog-2-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								EN EL CENTRO TIENE ESCRITO<br /><strong>"CIEN PESOS"</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-100pe-dialog-3" class="dialog dialog-small-up">
+						<div id="cb-100pe-dialog-3-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE BILLETE TIENE OTRA VERSI&Oacute;N CON EL <strong> MISMO VALOR</strong>
+							</span>
+						</div>
+					</div>
+					<div id="cb-100pe-dialog-4" class="dialog dialog-small-up">
+						<div id="cb-100pe-dialog-4-txt" class="dialog-txt">
+							<span class="dialog-intext">
+								ESTE ES EL <strong>OTRO LADO</strong> DEL BILLETE DE 100 PESOS								
+							</span>
+						</div>						
+					</div>
+					<div class="cm-b-banner">
+						<div id="cb-100pe-front" class="bill-grande" ></div>
+                        <div id="cb-100pe-back" class="bill-grande" ></div>
+                        <div id="cb-100pe-front-z1" class="bill-grande"></div>
+                        <div id="cb-100pe-front-z2" class="bill-grande"></div>
+                        <div id="cb-100pe-front-c1" class="bill-comp bcomp-left"></div>
+                        <div id="cb-100pe-front-zc1" class="bill-comp bcomp-left"></div>
+                        <div id="cb-100pe-front-c2" class="bill-comp bcomp-right"></div>
+                        <div id="cb-100pe-front-zc2" class="bill-comp bcomp-right"></div>
+                        <div id="igual-100">
+                        	<div class="igual up"></div>
+                        	<div class="igual middle"></div>
+                        	<div class="igual down"></div>
+                    	</div>                        
+					</div>
+					<a id="m-btn-cb-100" class="btn m-btn m-btn-pos" href="../index.html#seleccion-juego" rel="external"></a>
+                    <a id="b-btn-cb-100" class="btn b-btn-on b-btn-pos" href="#index-conocer-b"></a>
+                    <a id="hm-btn-cb-100" class="btn hm-btn hm-btn-pos " href="../index.html" rel="external"></a>
+				</div>
+    		</div>    		
+    	</div>
+    	<!--Pag. principal de juego para conocer la billete de 100 pesos: fin -->
+    	
+       	<script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript">
+			/*document.addEventListener("deviceready", onDeviceReady, false);
+
+			function onDeviceReady() {
+
+				*/conocerDinero.initialize();    
+			//}	
+        	    		
+        </script>
+    </body>
+</html>

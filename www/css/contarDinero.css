@@ -1,0 +1,224 @@
+/**********************Menú conocer los billetes*************************/
+.cds-bg-container{
+	background : url(../img/bground/b-selec-cds.png);
+	background-size: 100% 100%;
+}
+.cb-vaca-img{
+	position:fixed;
+	height:30% !important;
+	width: 21% !important;
+	top: 2%;
+	bottom:68%;
+	left:2%;
+	right:77%;
+	z-index: 1;
+}
+/**************************************************************************/
+/*****************BILLETES********************************/
+.cds-b-banner{
+	position:fixed;
+	width: 83% !important;
+	height: 70% !important; 
+	top: 16.6%;
+	right: 8.5%;
+	bottom: 13.4%;
+	left: 8.5%;
+	z-index: 0;	
+}
+.cds-b-banner-img{
+	border:solid;
+	border-width:1px;
+}
+.cds-bill-banner{
+	position: absolute;
+	height:20% !important;
+	width: 25% !important;	
+}
+.cds_pos_bill_1_up_down, .cds_pos_bill_2_up_down, .cds_pos_bill_3_up_down{
+	top: 22%;
+	bottom:60%;	
+}
+.cds_pos_bill_4_up_down, .cds_pos_bill_5_up_down, .cds_pos_bill_6_up_down{
+	top: 60%;
+	bottom:22%;	
+}
+.cds_pos_bill_1_left_rigth , .cds_pos_bill_4_left_rigth{
+	left: 7%;
+	right: 67%;
+}
+.cds_pos_bill_2_left_rigth, .cds_pos_bill_5_left_rigth{
+	left: 37%;
+	right: 63%;
+}
+.cds_pos_bill_3_left_rigth, .cds_pos_bill_6_left_rigth{
+	left: 67%;
+	right: 7%;
+}
+.cds_pos_1_up_down, .cds_pos_2_up_down, .cds_pos_3_up_down{
+	top: 22%;
+	bottom:60%;	
+}
+.cds_pos_4_up_down, .cds_pos_5_up_down, .cds_pos_6_up_down{
+	top: 60%;
+	bottom:22%;	
+}
+.cds_pos_1_left_rigth , .cds_pos_4_left_rigth{
+	left: 7%;
+	right: 67%;
+}
+.cds_pos_2_left_rigth, .cds_pos_5_left_rigth{
+	left: 37%;
+	right: 63%;
+}
+.cds_pos_3_left_rigth, .cds_pos_6_left_rigth{
+	left: 67%;
+	right: 7%;
+}
+.bill_1_2_billetes_centrados{
+	top: 22%;
+	bottom:60%;	
+	left: 15%;
+	right: 75%;
+}
+.bill_2_2_billetes_centrados{
+	top: 22%;
+	bottom:60%;	
+	left: 57%;
+	right: 83%;
+}
+/******************************************************/
+
+/*******************GENERAL****************************/
+
+.opcion_bg{
+	position:absolute !important;
+	background : url(../img/btn/opcion.png) !important;
+	background-size: 100% 100% !important;
+	color:white;/*Color por defecto blanco de letra para que no se vea mientras se cambia el tamaño via JS (jquery.textfill)*/
+}
+.opcion_1{
+	top: 90%;
+	bottom:22%;
+	left: 15%;
+	right: 75%;
+}
+.opcion_2{
+	top: 90%;
+	bottom:22%;
+	left: 48%;
+	right: 63%;
+}
+.opcion_3{
+	top: 90%;
+	bottom:22%;
+	left: 80%;
+	right: 7%;
+}
+.opciones{
+	position: absolute;
+	height:18% !important;
+	width: 26% !important;
+	border:none;	
+}
+.monto_buscado{
+	position:absolute;
+	top:8% !important;
+	text-align: center;
+	color: transparent;
+	vertical-align: middle;
+}
+
+#cds-ns-bg-container{
+	background : url(../img/bground/b-ns.png);
+	background-size: 100% 100%;
+}
+/******************************************************/
+
+/*******************MONEDAS****************************/
+.mon-banner{
+	position:absolute;
+	text-align:center
+}
+.moneda{
+	height:27% !important;
+	width: 15% !important;
+}
+.mon_centradas_vert{
+	top:10%;
+	bottom:30%;	
+}
+.mon_1_2_centrados{
+	height:27% !important;
+	width: 15% !important;
+	left: 30%;
+	right: 75%;
+}
+.mon_2_2_centrados{
+	height:27% !important;
+	width: 15% !important;
+	left: 57%;
+	right: 83%;
+}
+/******************************************************/
+/*******************Billetes y monedas*****************/
+.mon_bill_centradas_vert{
+	top:30%;
+	bottom:30%;	
+}
+.mon_1_3_centrados, .mon_4_3_centrados{
+	left: 10%;
+	right: 75%;
+}
+.mon_2_3_centrados, .mon_5_3_centrados{
+	left: 43%;
+	right: 83%;
+}
+.mon_3_3_centrados, .mon_6_3_centrados{
+	left: 74%;
+	right: 83%;
+}
+.bill_1_3_centrados, .bill_4_3_centrados{
+	left: 5%;
+	right: 75%;
+}
+.bill_2_3_centrados, .bill_5_3_centrados{
+	left: 35%;
+	right: 83%;
+}
+.bill_3_3_centrados, .bill_6_3_centrados{
+	left: 67%;
+	right: 83%;
+}
+/******************************************************/
+
+/*******************BOTONES****************************/
+.cds-b-banner-botones{/*TODO MODIFICAR*/
+	position:fixed;
+	width: 83% !important;
+	height: 70% !important; 
+}
+.cds_pos_boton_1_up_down, .cds_pos_boton_2_up_down, .cds_pos_boton_3_up_down{
+	top: 60%;
+	bottom:22%;	
+}
+.cds_pos_boton_1_left_rigth{
+	left: 7%;
+	right: 67%;
+}
+.cds_pos_boton_2_left_rigth{
+	left: 37%;
+	right: 63%;
+}
+.cds_pos_boton_3_left_rigth{
+	left: 67%;
+	right: 7%;
+}
+/**********************************************************/
+
+/******************DIALOGOS*********************************/
+
+.cds-dialog{
+	left:24%  !important;
+	right:16% !important;
+}
+

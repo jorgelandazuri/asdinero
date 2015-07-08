@@ -1,0 +1,23 @@
+{
+	"jugadorActivo": "Pepe",
+	"jugadores":[
+					{	
+						"nombre": "Pepe", 
+						"foto": "/PATH/photoPepe.png",
+						"juegosGanados":[
+											{"juego": "idJuego1", "nivel": "nNivel", "alternativa": "x" },
+											{"juego": "idJuego2", "nivel": "nNivel", "alternativa": "x" },
+											{"juego": "idJuegox", "nivel": "nNivel", "alternativa": "x" }
+										] 
+					},
+					{	
+						"nombre": "Nico", 
+						"foto": "/PATH/photoNico.png",
+						"juegosGanados":[
+											{"juego": "idJuego1", "nivel": "nNivel", "alternativa": "x" },
+											{"juego": "idJuego2", "nivel": "nNivel", "alternativa": "x" },
+											{"juego": "idJuegox", "nivel": "nNivel", "alternativa": "x" }
+										] 
+					}
+				]
+}

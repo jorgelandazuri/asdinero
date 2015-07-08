@@ -1,0 +1,1755 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+	height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    background-attachment:fixed;   
+}
+
+/*************************GENERALES**********************************/
+
+/*Dimensión y fondos*/
+.fullscreen{
+	position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    padding: 0;	
+}
+.fp-h{
+	height:100% !important;
+}
+.fp-w{
+	width:100% !important;
+}
+.page-background{
+	position: fixed; 
+	top: 0%; 
+	left: 0%;
+	bottom:0%;
+	right:0%;
+	padding:0;	 
+	width: 100% !important; 
+	height: 100% !important; 
+	background-repeat: no-repeat;	
+}
+/*Botones panel*/
+.btn{
+	position:absolute;
+	height: 7% !important;
+	width: 5% !important;
+	margin: 0;
+	border: 0;
+}
+.hm-btn{
+	background : url(../img/btn/hm-btn.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.hm-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	right: 3%;
+	left: 92%;
+}
+.m-btn{
+	background : url(../img/btn/m-btn.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.m-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 3%;
+	right: 92%;
+}
+.b-btn-on{
+	background : url(../img/btn/b-btn-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.b-btn-off{
+	background : url(../img/btn/b-btn-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.b-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 10%;
+	right: 85%;	
+}
+.s-btn-on{
+	background : url(../img/btn/s-btn-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.s-btn-off{
+	background : url(../img/btn/s-btn-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.s-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 16%;
+	right: 79%;
+}
+.e-btn{
+	background : url(../img/btn/e-btn.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.h-btn{
+	background : url(../img/btn/h-btn.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.one-btn-on{
+	background : url(../img/btn/1-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.one-btn-off{
+	background : url(../img/btn/1-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.one-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 45%;
+	right: 50%;
+}
+.two-btn-on{
+	background : url(../img/btn/2-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.two-btn-off{
+	background : url(../img/btn/2-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.two-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 52%;
+	right: 43%;
+}
+.three-btn-on{
+	background : url(../img/btn/3-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.three-btn-off{
+	background : url(../img/btn/3-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.three-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 59%;
+	right: 36%;
+}
+.four-btn-on{
+	background : url(../img/btn/4-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.four-btn-off{
+	background : url(../img/btn/4-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.four-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 66%;
+	right: 29%;
+}
+.five-btn-on{
+	background : url(../img/btn/5-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.five-btn-off{
+	background : url(../img/btn/5-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.five-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 73%;
+	right: 22%;
+}
+.six-btn-on{
+	background : url(../img/btn/6-on.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.six-btn-off{
+	background : url(../img/btn/6-off.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+.six-btn-pos{
+	top: 92%;
+	bottom: 1%;
+	left: 80%;
+	right: 15%;
+}
+
+.nivel-actual{
+	position: fixed;
+    height: 10% !important;
+    width: 7% !important;
+    top:2%;
+    left:92%;
+    bottom:88%;
+    right:1%;
+}
+.ir-nivel{
+	position: absolute;
+    height: 6% !important;
+    width: 10% !important;
+	top: 93% !important;
+	bottom: 1% !important;
+	left: 33% !important;
+	right: 57% !important;
+}
+
+/*Botones nivel superado*/
+.ns-btn{
+	position:absolute;
+	height: 11.5% !important;
+	width: 32% !important;
+	left: 52%;
+	right: 26%;	
+}
+.ns-btn.back{
+	top:37%;
+	bottom:51.5%;
+}
+.ns-btn.sig{
+	top:51%;
+	bottom:37.5%;
+}
+
+
+/*Dialogs*/
+/*****Burbuja******/
+div.dialog{
+	position:absolute;
+	margin: 0;
+	background: #FFFFFF;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	font-family: "Comic Sans MS";
+	border-radius: 10px;
+	border: #000000 solid 2px;
+	text-align:center;
+	z-index: 1;
+	color:white; /*Color por defecto blanco de letra para que no se vea mientras se cambia el tamaño via JS (jquery.textfill)*/	
+}
+div.dialog:before{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 21px 15px 0;
+	border-color: transparent #000000;
+	display: block;
+	width: 0;
+	z-index: 0;
+	margin-top: -15px;
+	left: -23px;
+	top: 62%;
+}
+div.dialog:after{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 14px 21px 14px 0;
+	border-color: transparent #FFFFFF;
+	display: block;
+	width: 0;
+	z-index: 1;
+	margin-top: -14px;
+	left: -20px;
+	top: 62%;
+}
+
+div.dialog-txt{
+	position:absolute;
+	height: 80% !important;
+	width: 90% !important;
+	top:10%;
+	bottom:10%;
+	left:5%;
+	right:5%;
+	vertical-align: middle;
+}
+
+
+/*Posición y tamaño de cada diálogo*/
+.dialog-large-up{
+	width: 66% !important;
+	height: 17% !important;
+	top:0%;
+	bottom:83%;
+	left: 25%;
+	right: 9%;
+	
+}
+
+.dialog-small-up{
+	width: 60% !important;
+	height: 17% !important;
+	top:0%;
+	bottom:83%;
+	left: 25%;
+	right: 15%;	
+}
+
+
+/*Estilos de clases de drag & drop*/
+.drag-drop-limit-container{
+	position:fixed;
+	width: 86% !important;
+	height: 81% !important; 
+	top: 11%;
+	right:7%;
+	bottom: 8%;
+	left: 7%;
+	z-index=0;	
+}
+
+/*************************POR PAGINAS**********************************/
+
+
+/*Main page*/
+#index-bg-container{
+	background : url(../img/bground/b-main.png);
+	background-size: 100% 100%;
+}
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+   	width:36% !important;
+    height: 7% !important;
+    position: fixed;
+    top:90%;
+    bottom: 3;
+    right:32%;
+    left:32%;             
+}
+#blink-intro-msg{
+    background-color:#E8ED11;
+    color:#5B3C09;
+    border-radius:20px;
+    margin:0;
+	-webkit-border-radius:20px;
+	font-size:3.0vw;
+	text-align: center;
+}
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+#e-btn-index{
+	top: 91%;
+	bottom: 2%;
+	right: 5%;
+	left: 88%;
+}
+
+/*Login page*/
+#login-bg-container{
+	background : url(../img/bground/b-login.png);
+	background-size: 100% 100%;
+}
+#emp-jug-banner{
+	background : url(../img/login-banner.png);
+	background-size:100% 100%;
+	position:fixed;
+	width: 65% !important;
+	height: 50% !important; 
+	top: 19%;
+	right:1%;
+    bottom: 31%;
+    left: 34%;
+}
+#jugar-sj,#jugar-inv{
+	width: 75%;
+	height: 25%! important;
+	text-align:center;
+	background-color:#EFDA27;	
+}
+#jugar-sj,#jugar-inv{
+	margin: 0;
+	position:absolute;
+	left:13%;
+	right:12%;
+	font-size:3.0vw !important;	
+}
+#jugar-sj{
+	top:25%;
+	bottom:50%;	
+}
+#jugar-inv{
+	top:60%;
+	bottom:15%;
+}
+#jugar-sj-menu{
+	display:none;
+	position:absolute;
+	width: 80% !important;	
+	height:100%;
+	margin: 0;
+	left:10%;
+	right:10%;
+}
+.ui-select{
+	position:absolute;
+	top: 25%;	
+	height: 20% !important;	
+	width: 100%	!important;	
+	margin:0;
+}
+.ui-select a{
+	background-color:#F2BD86 !important;
+}
+.ui-select a span {
+    font-size:1.8vw !important;
+    padding-top: 2%  !important;
+    padding-bottom: 2%  !important;    
+}
+#jugar-jn{
+	position:absolute;
+	top:50%;
+	bottom:25%;
+	height: 25% !important;
+	width: 100%	!important;	
+}
+#input-jn,#button-jn{
+	position:absolute;
+	margin:0;
+	border:0;
+	top:10%;
+	bottom:10%;
+	text-align:center;
+	height: 80% !important;	
+}
+.ui-input-text{
+	width: 60% !important;
+	height: 80% !important;
+	border:0;
+}
+#input-jn{
+	right:40%;
+	left:0%;
+	width: 60% !important ;
+}
+#button-jn{
+	left:60%;
+	right:0%;	
+	width: 40%	!important;
+	background-color:#E9D634 !important;
+	color:white;
+	font-size:1.8vw !important;
+}
+#jugar-sj-back{
+	display:none;
+	position:absolute;
+	margin:0;
+	top:78%;
+	bottom:10%;
+	left:75%;
+	right:5%;
+	height:15% !important;
+	width:20% !important;
+}
+#jugar-sj-back button{
+	background-color:#208729;
+	color:white;
+	margin:0;
+	border:0;
+	padding: 0;
+	font-size:1.8vw !important;	
+}
+
+#h-btn-login{
+	top: 91%;
+	bottom: 2%;
+	right: 5%;
+	left: 88%;
+}
+
+/*Selección de juego*/
+#sj-bg-container{
+	background : url(../img/bground/b-selec-j.png);
+	background-size: 100% 100%;
+}
+#cd-link,#ctd-link,#ce-link,#cv-link{
+	position: absolute;	
+	height:35% !important;
+	width:20%;
+	top: 37%;
+    bottom: 28%;
+    margin:0;
+    border:0;
+}
+#cd-link{
+	left: 4%;
+	right: 76%;
+}
+#ctd-link{
+	left: 28%;
+	right: 52%;
+}
+#ce-link{
+	left: 52%;
+	right: 28%;
+}
+#cv-link{
+	left: 76%;
+	right: 4%;
+}
+.vaca-brazos-diag{
+	position:fixed;
+	height:30% !important;
+	width: 19% !important;
+	top: 3%;
+	bottom:67%;
+	left:3%;
+	right:78%;
+}
+#hm-btn-sj{
+	top: 91%;
+	bottom: 2%;
+	right: 5%;
+	left: 88%;
+}
+#b-btn-sj{
+	top: 92%;
+	bottom: 1%;
+	left: 3%;
+	right: 90%;
+}
+
+/* Menú conocer el dinero */
+#cd-index-bg-container{
+	background : url(../img/bground/b-selec-cd.png);
+	background-size: 100% 100%;
+}
+.cm-b-banner{
+	position:fixed;
+	width: 83% !important;
+	height: 70% !important; 
+	top: 16.6%;
+	right: 8.5%;
+	bottom: 13.4%;
+	left: 8.5%;
+	z-index: 0;	
+}
+#cm-link,#cb-link{
+	position: absolute;	
+	height:40% !important;
+	width:25%;
+	top: 35%;
+    bottom: 25%;
+    margin:0;
+    border:0;
+} 
+#cm-link{
+    right: 45%;
+    left: 20%;
+}
+#cb-link{
+    right: 15%;
+    left: 50%;
+}
+/*
+#hm-btn-cd{
+	top: 91%;
+	bottom: 2%;
+	right: 5%;
+	left: 88%;
+}
+#b-btn-cd{
+	top: 92%;
+	bottom: 1%;
+	left: 3%;
+	right: 90%;
+}
+*/
+
+/* Menú conocer las monedas */
+.cm-bg-container{
+	background : url(../img/bground/b-selec-cm.png);
+	background-size: 100% 100%;	
+}
+.cm-vaca-img{
+	position:fixed;
+	height:30% !important;
+	width: 21% !important;
+	top: 2%;
+	bottom:68%;
+	left:2%;
+	right:77%;
+	z-index: 1;
+}
+.mon-banner{
+	position:absolute;
+}
+#cm-2pe{
+	height:40% !important;
+	width: 22% !important;
+	top: 10%;
+	bottom:50%;
+	left:26%;
+	right:53%;
+}
+#cm-1pe{
+	height:37% !important;
+	width: 20% !important;
+	top: 11%;
+	bottom:53%;
+	left:56%;
+	right:24%;
+}
+#cm-50ctv{
+	height:40% !important;
+	width: 21% !important;
+	top: 50%;
+	bottom:10%;
+	left:10%;
+	right:69%;
+}
+#cm-25ctv{
+	height:37% !important;
+	width: 19% !important;
+	top: 51%;
+	bottom:11%;
+	left:36%;
+	right:48%;
+}
+#cm-10ctv{
+	height:25% !important;
+	width: 14% !important;
+	top: 57%;
+	bottom:18%;
+	left:60%;
+	right:28%;
+}
+#cm-5ctv{
+	height:21% !important;
+	width: 12.5% !important;
+	top: 59%;
+	bottom:20%;
+	left:78%;
+	right:9.5%;
+}
+.mon-grande{
+	height:70% !important;
+	width: 40% !important;
+	top: 15%;
+	bottom: 15%;
+	left: 30%;
+	right: 30%;
+}
+
+/*Conocer las monedas - 2 pesos */
+#cm-2pe-front{
+	background : url(../img/mon/2.png);
+	background-size: 100% 100%;
+}
+#cm-2pe-back{
+	background : url(../img/mon/2-b.png);
+	background-size: 100% 100%;	
+}
+#cm-2pe-h1{
+	background : url(../img/mon/2-h1.png);
+	background-size: 100% 100%;	
+}
+#cm-2pe-h2{
+	background : url(../img/mon/2-h2.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer las monedas - 1 peso */
+#cm-1pe-front{
+	background : url(../img/mon/1.png);
+	background-size: 100% 100%;
+}
+#cm-1pe-back{
+	background : url(../img/mon/1-b.png);
+	background-size: 100% 100%;
+}
+#cm-1pe-h1{
+	background : url(../img/mon/1-h1.png);
+	background-size: 100% 100%;
+}
+#cm-1pe-h2{
+	background : url(../img/mon/1-h2.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer las monedas - 50 ctvs */
+#cm-50c-front{
+	background : url(../img/mon/50.png);
+	background-size: 100% 100%;
+}
+#cm-50c-back{
+	background : url(../img/mon/50-b.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer las monedas - 25 ctvs */
+#cm-25c-front{
+	background : url(../img/mon/25.png);
+	background-size: 100% 100%;
+}
+#cm-25c-back{
+	background : url(../img/mon/25-b.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer las monedas - 10 ctvs */
+#cm-10c-front{
+	background : url(../img/mon/10.png);
+	background-size: 100% 100%;
+}
+#cm-10c-back{
+	background : url(../img/mon/10-b.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer las monedas - 5 ctvs */
+#cm-5c-front{
+	background : url(../img/mon/5.png);
+	background-size: 100% 100%;
+}
+#cm-5c-back{
+	background : url(../img/mon/5-b.png);
+	background-size: 100% 100%;
+}
+
+/*Menú conocer los billetes*/
+.cb-bg-container{
+	background : url(../img/bground/b-selec-cb.png);
+	background-size: 100% 100%;
+}
+.cb-vaca-img{
+	position:fixed;
+	height:30% !important;
+	width: 21% !important;
+	top: 2%;
+	bottom:68%;
+	left:2%;
+	right:77%;
+	z-index: 1;
+}
+.bill-banner{
+	position: absolute;
+	height:20% !important;
+	width: 25% !important;	
+}
+.bill-banner img{
+	border: solid 1px grey !important;	
+}
+#cb-2pe,#cb-5pe,#cb-10pe{
+	top: 22.5%;
+	bottom:57.5%;	
+}
+#cb-20pe,#cb-50pe,#cb-100pe{
+	top: 57.5%;
+	bottom:22.5%;	
+}
+#cb-2pe,#cb-20pe{
+	left: 7%;
+	right: 68%;
+}
+#cb-5pe,#cb-50pe{
+	left: 37%;
+	right: 38%;
+}
+#cb-10pe,#cb-100pe{
+	left: 68%;
+	right: 7%;
+}
+.bill-grande{
+	position: absolute;
+	height:70% !important;
+	width: 75% !important;
+	top: 15%;
+	bottom: 15%;
+	left: 12.5%;
+	right: 12.5%;
+	border: solid 1px grey !important;	
+}
+#cb-2pe-mon-front{
+	background : url(../img/mon/2.png);
+	background-size: 100% 100%;
+	position:absolute;
+	height:25%;
+	width:15%;
+	top: 37.5%;
+	bottom:37.5%;
+	left:72.5%;
+	right:12.5%
+}
+#cb-2pe-front-c{
+	background : url(../img/bill/2f-g.png);
+	background-size: 100% 100%;
+	position:absolute;
+	height:40%;
+	width:45%;
+	top: 30%;
+	bottom:30%;
+	left:12.5%;
+	right:42.5%
+}
+/*Signo de igual grande */
+#igual-2{
+	position:absolute;
+	height:15%;
+	width:10%;
+	top: 41%;
+	bottom:44%;
+	left:60%;
+	right:30%;	
+}
+#igual-100{
+	position:absolute;
+	height:15%;
+	width:10%;
+	top: 43%;
+	bottom:44%;
+	left:45%;
+	right:40%;	
+}
+.igual{
+	position:absolute;
+	width:100%;	
+	right:0;
+	left:0;
+}
+.up{
+	top:0;
+	bottom:66%;
+	height:34%;
+	background-color:black;
+		
+}
+.middle{
+	top:34%;
+	bottom:34%;
+	height:32%;
+	background-color:white;
+}
+.down{
+	top:66%;
+	bottom: 0%;
+	height: 34%;
+	background-color:black;	
+}
+
+.bill-comp{
+	position:absolute;
+	height:30%;
+	width:35%;
+	top: 35%;
+	bottom:35%;
+}
+.bcomp-left{
+	left:5%;
+	right:60% 
+}
+.bcomp-right{
+	left:60%;
+	right:5%
+}
+
+/*Conocer los billetes - 2 pesos */
+#cb-2pe-front{
+	background : url(../img/bill/2f-g.png);
+	background-size: 100% 100%;
+}
+#cb-2pe-back{
+	background : url(../img/bill/2b-g.png);
+	background-size: 100% 100%;
+}
+#cb-2pe-front-z1{
+	background : url(../img/bill/2f-g-z1.png);
+	background-size: 100% 100%;
+}
+#cb-2pe-front-z2{
+	background : url(../img/bill/2f-g-z2.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer los billetes - 5 pesos */
+#cb-5pe-front{
+	background : url(../img/bill/5f-g.png);
+	background-size: 100% 100%;
+}
+#cb-5pe-back{
+	background : url(../img/bill/5b-g.png);
+	background-size: 100% 100%;
+}
+#cb-5pe-front-z1{
+	background : url(../img/bill/5f-g-z1.png);
+	background-size: 100% 100%;
+}
+#cb-5pe-front-z2{
+	background : url(../img/bill/5f-g-z2.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer los billetes - 10 pesos */
+#cb-10pe-front{
+	background : url(../img/bill/10f-g.png);
+	background-size: 100% 100%;
+}
+#cb-10pe-back{
+	background : url(../img/bill/10b-g.png);
+	background-size: 100% 100%;
+}
+#cb-10pe-front-z1{
+	background : url(../img/bill/10f-g-z1.png);
+	background-size: 100% 100%;
+}
+#cb-10pe-front-z2{
+	background : url(../img/bill/10f-g-z2.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer los billetes - 20 pesos */
+#cb-20pe-front{
+	background : url(../img/bill/20f-g.png);
+	background-size: 100% 100%;
+}
+#cb-20pe-back{
+	background : url(../img/bill/20b-g.png);
+	background-size: 100% 100%;
+}
+#cb-20pe-front-z1{
+	background : url(../img/bill/20f-g-z1.png);
+	background-size: 100% 100%;
+}
+#cb-20pe-front-z2{
+	background : url(../img/bill/20f-g-z2.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer los billetes - 50 pesos */
+#cb-50pe-front{
+	background : url(../img/bill/50f-g.png);
+	background-size: 100% 100%;
+}
+#cb-50pe-back{
+	background : url(../img/bill/50b-g.png);
+	background-size: 100% 100%;
+}
+#cb-50pe-front-z1{
+	background : url(../img/bill/50f-g-z1.png);
+	background-size: 100% 100%;
+}
+#cb-50pe-front-z2{
+	background : url(../img/bill/50f-g-z2.png);
+	background-size: 100% 100%;
+}
+
+/*Conocer los billetes - 100 pesos */
+#cb-100pe-front{
+	background : url(../img/bill/100f-g.png);
+	background-size: 100% 100%;
+}
+#cb-100pe-back{
+	background : url(../img/bill/100b-g.png);
+	background-size: 100% 100%;
+}
+#cb-100pe-front-z1{
+	background : url(../img/bill/100f-g-z1.png);
+	background-size: 100% 100%;
+}
+#cb-100pe-front-z2{
+	background : url(../img/bill/100f-g-z2.png);
+	background-size: 100% 100%;
+}
+#cb-100pe-front-c1{
+	background : url(../img/bill/100f-g.png);
+	background-size: 100% 100%;	
+}
+#cb-100pe-front-zc1{
+	background : url(../img/bill/100f-g-z1.png);
+	background-size: 100% 100%;
+}
+#cb-100pe-front-c2{
+	background : url(../img/bill/100f-g-evita.png);
+	background-size: 100% 100%;
+}
+#cb-100pe-front-zc2{
+	background : url(../img/bill/100f-g-evita-z.png);
+	background-size: 100% 100%;
+}
+
+/**/
+/*Juego Compra exacta */
+/*/
+
+/*Nivel superado*/
+#ce-ns-bg-container{
+	background : url(../img/bground/b-ns.png);
+	background-size: 100% 100%;
+}
+
+/*Intro*/
+#ce-index-bg-container{
+	background : url(../img/bground/b-ce-intro.png);
+	background-size: 100% 100%;
+}
+.ce-vaca-img{
+	position:fixed;
+	height:25% !important;
+	width: 15% !important;
+	top: 1%;
+	bottom:74%;
+	left:4%;
+	right:81%;
+}
+#ce-index-dialog-0{
+	left:21%;
+	right:19%;
+}
+#ce-vaca-bolso-img{
+	position:fixed;
+	height:30% !important;
+	width: 14% !important;
+	top: 53.5%;
+	bottom:16.5%;
+	left:29%;
+	right:57%;
+}
+/*Generales Compra exacta*/
+.ce-banner{
+	position:fixed;
+	width: 84% !important;
+	height: 70% !important; 
+	top: 16.5%;
+	right:8%;
+	bottom: 13.5%;
+	left: 8%;
+	z-index: 0;	
+}
+.estante{
+	background : url(../img/estante.png);
+	background-size: 100% 100%;
+	position:absolute;
+	height:90%;
+	width:40%;
+	top:5%;
+	bottom:5%;
+	left:53%;
+	right:7%;	
+}
+.estante-int{
+	position:absolute;
+	height:87%;
+	width:92%;
+	top:3%;
+	bottom:10%;
+	left:4%;
+	right:4%;
+}
+.piso{
+	position:absolute;
+	height:50%;
+	width:50%;		
+}
+.piso-bolso{
+	position:absolute;
+	height:40%;
+	width:40%;
+} 
+.p-arriba{
+	top:0%;
+	bottom:50%;
+}
+.p-abajo{
+	top:50%;
+	bottom:0%;
+}
+.p-izq{
+	left:0%;
+	right:50%;
+}
+.p-der{
+	left:50%;
+	right:0%;
+}
+.p-arriba .producto{
+	position:absolute;
+	width:90%;
+	left:5%;
+	right:5%;
+	height:45%;
+	top:26%;
+	bottom:29%;
+}
+.p-abajo .producto{
+	position:absolute;
+	width:90%;
+	left:5%;
+	right:5%;
+	height:45%;
+	top:5%;
+	bottom:50%;	
+}
+.precio{
+	position:absolute;
+	background-color:white;
+	height:20% !important;
+	width:45% !important;
+	bottom:14% !important;
+	left:27.5% !important;
+	right:27.5% !important;
+	border:solid 2px black;
+	text-align: center;
+	vertical-align:middle;
+	color: white; 
+}
+.precio-arr{
+	top: 71% !important;
+}
+.precio-abj{
+	top: 51% !important;
+}
+.ce-dialog{
+	left:21%  !important;
+	right:19% !important;
+}
+
+.caja-reg{
+	background : url(../img/caja-reg.png);
+	background-size: 100% 100%;
+	position:absolute;
+	height:45%;
+	width:25%;
+	top:25%;
+	bottom:30%;
+	left:70%;
+	right:5%;
+}
+.cr-pago{
+	color:transparent;
+	position:absolute;
+	height:15%;
+	width:30%;
+	top:5%;
+	bottom:75%;
+	left:52%;
+	right:18%;
+	text-align: center;
+}
+.prod-bolsa{
+	position:absolute;
+	height:37%;
+	width:17%;
+	left:6%;
+	right:27.5%;
+	transition: background-color 0.3s, border-color 0.3s;
+	border: dashed 2px transparent;	
+} 
+.bolsa-arr{
+	top:17%;
+	bottom:46%;
+}
+.bolsa-abj{
+	top:55%;
+	bottom:8%;
+}
+.bolsa-med{
+	top:32%;
+	bottom:31%;	
+}
+.comprado-bolsa{
+	position:absolute;
+	height:45% !important;
+	width:90% !important;
+	top:15% !important;
+	left:5%;
+	right:5%;
+	bottom:40%;
+}
+.precio-bolsa{
+	position:absolute;
+	background-color:white;
+	height:20% !important;
+	width:45% !important;
+	top: 70% !important;
+	left: 27.5% !important;
+	right: 27.5% !important;
+	bottom: 10% !important;
+	border:solid 2px black;
+	text-align: center;
+	vertical-align:middle;
+	color: white;
+}
+
+.pagar-btn{
+	position:absolute;
+	height:15%;
+	width:20%;
+	top:75%;
+	bottom:10%;
+	left:72.5%;
+	right:7.5%;	
+}
+
+.listo-btn{
+	position:absolute;
+	height:15%;
+	width:20%;
+	top:45%;
+	bottom:40%;
+	left:30%;
+	right:50%;	
+}
+
+.mon-pago{
+	position:absolute;
+	height:20%;
+	width:10%;	
+}
+.mon-pago-pos1{
+	top:10%;
+	bottom:65%;
+	left:33%;
+	right:57%;
+}
+.mon-pago-pos2{
+	top:10%;
+	bottom:65%;
+	left:52%;
+	right:38%;
+}
+.mon-pago-pos3{
+	top:37.5%;
+	bottom:47.5%;
+	left:33%;
+	right:57%;
+}
+.mon-pago-pos4{
+	top:37.5%;
+	bottom:47.5%;
+	left:52%;
+	right:38%;
+}
+.mon-pago-pos5{
+	top:65%;
+	bottom:10%;
+	left:33%;
+	right:57%;
+}
+.mon-pago-pos6{
+	top:65%;
+	bottom:10%;
+	left:52%;
+	right:38%;
+}
+.bill-pago{
+	position:absolute;
+	height:20%;
+	width:20%;
+	border: solid 1px grey;	
+}
+.bill-pago-pos1{
+	top:10%;
+	bottom:70%;
+	left:26%;
+	right:44%;
+}
+.bill-pago-pos2{
+	top:10%;
+	bottom:65%;
+	left:48%;
+	right:32%;
+}
+.bill-pago-pos3{
+	top:37.5%;
+	bottom:47.5%;
+	left:26%;
+	right:44%;
+}
+.bill-pago-pos4{
+	top:37.5%;
+	bottom:47.5%;
+	left:48%;
+	right:32%;
+}
+.bill-pago-pos5{
+	top:65%;
+	bottom:10%;
+	left:26%;
+	right:44%;
+}
+.bill-pago-pos6{
+	top:65%;
+	bottom:10%;
+	left:48%;
+	right:32%;
+}
+.opc-bg{
+	background : url(../img/btn/opcion.png);
+	background-size: 100% 100%;
+}
+
+/*Nivel 1 - B1*/
+#ce-b1-bg-container{
+	background : url(../img/bground/b-ce-j.png);
+	background-size: 100% 100%;
+}
+#ce-b1-bill{
+	position:absolute;
+	height:30%;
+	width:35%;
+	top:35%;
+	bottom:35%;
+	left:10%;
+	right:55%;
+	border: solid 1px grey;			
+}
+
+/*Nivel 2 - B2*/
+
+#ce-b2-bg-container{
+	background : url(../img/bground/b-ce-j.png);
+	background-size: 100% 100%;
+}
+.bill-opc{
+	position:absolute;
+	height:25%;
+	width:33%;
+	left:57%;
+	right:10%;
+}
+.bill-opc img{
+	border: solid grey 1px;	
+}
+#bill-opc-a{
+	top:8.5% !important;
+	bottom: 67.5% !important;	
+}
+#bill-opc-b{
+	top:37.5% !important;
+	bottom: 48.5% !important;	
+}
+#bill-opc-c{
+	top:66.5% !important;
+	bottom: 8.5% !important;	
+}
+#ce-b2-producto{
+	position:absolute;
+	height:30%;
+	width:30%;
+	top:20%;
+	bottom:50%;
+	left:15%;
+	right:55%;		
+}
+#ce-b2-precio-bg{
+	background : url(../img/etiq.png);
+	background-size: 100% 100%;
+	position:absolute;
+	height:23% !important;
+	width:18% !important;
+	top:60% !important;
+	bottom:17% !important;
+	left:20% !important;
+	right:62% !important;		
+}
+#ce-b2-precio{
+	position:absolute;
+	height:75% !important;
+	width:80% !important;
+	top:8% !important;
+	bottom:17% !important;
+	left:10% !important;
+	right:10% !important;
+	text-align: center;
+	color: transparent;
+}
+
+/*Nivel 3 - B3*/
+
+#ce-b3-bg-container{
+	background : url(../img/bground/b-ce-j.png);
+	background-size: 100% 100%;
+}
+#b3-bill{
+	position:absolute;
+	height:27% !important;
+	width:33% !important;
+	top: 23%;
+	bottom:50%;
+	left:52%;
+	right:15%;
+}
+#b3-bill img{
+	border: solid grey 1px;
+}
+#b3-producto{
+	position:absolute;
+	height:30% !important;
+	width:30% !important;
+	top: 17%;
+	bottom:53%;
+	left:13%;
+	right:57%;
+}
+#ce-b3-precio-bg{
+	background : url(../img/etiq.png);
+	background-size: 100% 100%;
+	position:absolute;
+	height:23% !important;
+	width:15% !important;
+	top:42% !important;
+	bottom:35% !important;
+	left:20% !important;
+	right:65% !important;	
+}
+#ce-b3-precio{
+	position:absolute;
+	height:75% !important;
+	width:80% !important;
+	top:8% !important;
+	bottom:17% !important;
+	left:10% !important;
+	right:10% !important;
+	text-align: center;
+	color: transparent;
+}
+.sino-opt{
+	position:absolute;
+	height:20% !important;
+	width:20% !important;
+	top: 70%;
+	bottom:10%;	
+}
+.opt-izq{
+	left:27.5%;
+	right:52.5%;
+}
+.opt-der{
+	left:52.5%;
+	right:27.5%;
+}
+
+/*Nivel 4 - B4*/
+
+#ce-b4-bg-container{
+	background : url(../img/bground/b-ce-j.png);
+	background-size: 100% 100%;
+}
+
+.ce-vaca-compra-img{
+	position:fixed;
+	height:80% !important;
+	width: 25% !important;
+	top: 2%;
+	bottom: 18%;
+	left:3%;
+	right:72%;		
+}
+
+
+/*Nivel 5 - B5*/
+
+#ce-b5-bg-container{
+	background : url(../img/bground/b-ce-j.png);
+	background-size: 100% 100%;
+}
+
+/*Nivel 6 - B6*/
+
+#ce-b6-bg-container{
+	background : url(../img/bground/b-ce-j.png);
+	background-size: 100% 100%;
+}
+
+
+/**/
+/*Juego Compra con vuelto */
+/*/
+
+/*Generales Compra vuelto*/
+.cv-banner{
+	position:fixed;
+	width: 84% !important;
+	height: 70% !important; 
+	top: 16.5%;
+	right:8%;
+	bottom: 13.5%;
+	left: 8%;
+	z-index: 0;	
+}
+.cv-vaca-img{
+	position:fixed;
+	height:25% !important;
+	width: 15% !important;
+	top: 1%;
+	bottom:74%;
+	left:4%;
+	right:81%;
+}
+.cv-dialog{
+	left:21%  !important;
+	right:19% !important;
+}
+.mc-btn-type1{
+	position:absolute;
+	height:35% !important;
+	width:40% !important;	
+}
+.mc-btn-type2{
+	position:absolute;
+	height:25% !important;
+	width:80% !important;	
+}
+.vuelto-txt{
+	position:absolute;
+	height:70% !important;
+	width: 50% !important;
+	top: 15% !important;
+	bottom:15% !important;
+	left:25% !important;
+	right:25% !important;
+	color: rgba(0,0,0,0);
+	font-family: "Comic Sans MS";
+	font-weight: bold; 
+	text-align: center;
+}
+.kiosco{
+	position:absolute;
+	height:60% !important;
+	width: 40% !important;
+	top: 22% !important;
+	bottom:18% !important;
+	left:32.5% !important;
+	right:27.5% !important;	
+}
+
+/*Nivel superado*/
+#cv-ns-bg-container{
+	background : url(../img/bground/b-ns.png);
+	background-size: 100% 100%;
+}
+
+/*Intro*/
+#cv-index-bg-container{
+	background : url(../img/bground/b-cv-intro.png);
+	background-size: 100% 100%;
+}
+#cv-index-dialog-0{
+	left:21%;
+	right:19%;
+}
+#cv-vaca-bolso-img{
+	position:fixed;
+	height:30% !important;
+	width: 14% !important;
+	top: 53.5%;
+	bottom:16.5%;
+	left:29%;
+	right:57%;
+}
+
+
+/*Nivel 1 - C1*/
+
+#cv-c1-bg-container{
+	background : url(../img/bground/b-cv-j.png);
+	background-size: 100% 100%;
+}
+#c1-bill{
+	position:absolute;
+	height:27% !important;
+	width:33% !important;
+	top: 23%;
+	bottom:50%;
+	left:52%;
+	right:15%;
+}
+#c1-bill img{
+	border: solid grey 1px;
+}
+#c1-producto{
+	position:absolute;
+	height:30% !important;
+	width:30% !important;
+	top: 17%;
+	bottom:53%;
+	left:13%;
+	right:57%;
+}
+#cv-c1-precio-bg{
+	background : url(../img/etiq.png);
+	background-size: 100% 100%;
+	position:absolute;
+	height:23% !important;
+	width:15% !important;
+	top:42% !important;
+	bottom:35% !important;
+	left:20% !important;
+	right:65% !important;	
+}
+#cv-c1-precio{
+	position:absolute;
+	height:75% !important;
+	width:80% !important;
+	top:8% !important;
+	bottom:17% !important;
+	left:10% !important;
+	right:10% !important;
+	text-align: center;
+	color: transparent;
+}
+/*Nivel 2 - C2*/
+#cv-c2-bg-container{
+	background : url(../img/bground/b-cv-j.png);
+	background-size: 100% 100%;
+}
+#cv-c2-bill{
+	position:absolute;
+	height:30%;
+	width:35%;
+	top:35%;
+	bottom:35%;
+	left:10%;
+	right:55%;
+	border: solid 1px grey;			
+}
+.prod-elegido{
+	position:absolute;
+	height:40%;
+	width:20%;
+	top:8%;
+	bottom:52%;
+	left:62.5%;
+	right:17.5%;
+	background-color: rgba(232, 245, 57, 0.48);
+	border: solid 2px rgba(232, 245, 57, 0.95);			
+}
+#cv-c2-opc-ctn{
+	position:absolute;
+	height:45%;
+	width:45%;
+	top:50%;
+	bottom:5%;
+	left:50%;
+	right:5%;
+}
+#cv-c2-a{
+	top:10%;
+	bottom:55%;
+	left:7.5%;
+	right:47.5%;
+}
+#cv-c2-b{
+	top:10%;
+	bottom:55%;
+	left:52.5%;
+	right:7.5%;
+}
+#cv-c2-c{
+	top:60%;
+	bottom:5%;
+	left:30%;
+	right:30%;
+}
+
+/*Nivel 3 - C3*/
+#cv-c3-bg-container{
+	background : url(../img/bground/b-cv-j.png);
+	background-size: 100% 100%;
+}
+
+.cv-vaca-compra-img{
+	position:fixed;
+	height:80% !important;
+	width: 25% !important;
+	top: 2%;
+	bottom: 18%;
+	left:3%;
+	right:72%;		
+}
+
+.cv-opc-ctn-vertical{
+	position:absolute;
+	height:80%;
+	width:30%;
+	top:10%;
+	bottom:10%;
+	left:67.5%;
+	right:2.5%;
+}
+.cv-vuelto-vert-a{
+	top:7.5%;
+	bottom:67.5%;
+	left:10%;
+	right:10%;
+}
+.cv-vuelto-vert-b{
+	top:37.5%;
+	bottom:37.5%;
+	left:10%;
+	right:10%;
+}
+.cv-vuelto-vert-c{
+	top:67.5%;
+	bottom:7.5%;
+	left:10%;
+	right:10%;
+}
+
+/*Nivel 4 - C4*/
+#cv-c4-bg-container{
+	background : url(../img/bground/b-cv-j.png);
+	background-size: 100% 100%;
+}

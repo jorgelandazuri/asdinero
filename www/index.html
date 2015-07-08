@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+    	<!-- config -->
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- libraries -->
+        <!-- <script type="text/javascript" src="js/cordova.js"></script> -->
+        <link rel="stylesheet" href="js/lib/jqm/jquery.mobile-1.4.3.min.css" />
+        <script type="text/javascript" src="js/lib/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/lib/jqm/jquery.mobile-1.4.3.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.xml2json.js"></script>
+        <!-- customs style sheets and scripts -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <title>Aprendiendo sobre el dinero</title>
+    </head>
+    <body>
+    	<!--Pag. de inicio: inicio -->
+		<div data-role="page" class="app" id="index">
+			<div data-role="content" id="banner-continue" class="fullscreen">
+    			<div id="index-bg-container" class="page-background">
+	            	<a id="e-btn-index" class="btn e-btn" style="display: none"></a>
+	    			<div class="blink">
+		                <p id="blink-intro-msg">TOCA LA PANTALLA</p>	                	                
+	            	</div>
+            	</div>
+    		</div>
+    		<audio id="intro-audio" src="file:///C:/dev/projects/utn-pf/ws/pgap-pf-app/www/audio/intro-primer-pantalla.mp3" type="audio/mpeg" ></audio>
+    		<script type="text/javascript">
+				document.getElementById('intro-audio').play();
+				// var my_media = new Media("audio/intro-primer-pantalla.mp3",
+									// // success callback
+									// function() {
+										// console.log("playAudio():Audio Success");
+									// },
+									// // error callback
+									// function(err) {
+										// console.log("playAudio():Audio Error: " + err);
+								// });
+				// // Play audio
+				// my_media.play();
+    		</script>    		
+    	</div>
+    	<!--Pag. de inicio: fin -->
+    	
+    	<!--Pag. de login: inicio -->
+    	<div data-role="page" id="login">
+    		<div id="login-content" data-role="content" class="fullscreen" >
+				<div id="login-bg-container" class="page-background">
+					<div id="emp-jug-banner" >
+					<!-- Elegir un usuario guardado -->
+						<button id="jugar-sj" class="ui-btn ui-corner-all" data-inline="true">
+							SELECCIONAR JUGADOR
+						</button>
+						<div id="jugar-sj-menu">
+							<select id="select-jg" name="jg-elegido" data-native-menu="false" data-theme="b" data-icon="star" >
+								<option selected="selected" disabled="disabled">YA INGRESASTE TU NOMBRE? EL&#205;GELO AQU&#205;</option>								
+							</select>
+						<!-- Ingresar nuevo usuario -->
+							<div id="jugar-jn">
+								<input id="input-jn" type="text" placeholder="SINO, INGRESA TU NOMBRE" value="">
+								<button id="button-jn" class="ui-btn ui-corner-all">
+									CREAR JUGADOR
+								</button>
+							</div>
+						</div>						
+						<div id="jugar-sj-back">
+							<button  class="ui-btn ui-corner-all fp-h" data-inline="true">
+								VOLVER
+							</button>
+						</div>
+					<!-- Jugar sin usuario, como invitado -->
+						<button id="jugar-inv" class="ui-btn ui-corner-all">
+							JUGAR COMO INVITADO
+						</button>
+					</div>
+					<a id="h-btn-login" class="btn hm-btn" data-rel="back"></a>
+				</div>			
+    		</div>	
+    	</div>
+    	<!--Pag. de login: fin -->    	
+    	
+    	<!--Pag. de seleccion de juego: inicio -->
+    	<div data-role="page" id="seleccion-juego">
+    		<div data-role="content" class="fullscreen">
+				<div id="sj-bg-container" class="page-background">
+					<img id="sj-vaca-1" class="vaca-brazos-diag" src="img/sj-vaca-pos1.png" />
+					<img id="sj-vaca-2" class="vaca-brazos-diag" src="img/sj-vaca-pos2.png" />
+					<div id="cd-link">
+						<a href="html/conocerD.html" rel="external" class="fp-h fp-w" data-transition="none"><img src="img/sj-a-conocerD.png" class="fp-h fp-w"/></a>						
+					</div>
+					<div id="ctd-link">
+						<a href="html/contarD.html" rel="external" class="fp-h fp-w" data-transition="none"><img src="img/sj-b-contarD.png" class="fp-h fp-w"/></a>
+					</div>
+					<div id="ce-link">
+						<a href="html/compraE.html" rel="external"  class="fp-h fp-w" data-transition="none"><img src="img/sj-c-compraE.png" class="fp-h fp-w"/></a>					
+					</div>
+					<div id="cv-link">
+						<a href="html/compraV.html" rel="external"  class="fp-h fp-w" data-transition="none"><img src="img/sj-d-compraV.png" class="fp-h fp-w"/></a>						
+					</div>
+					<!-- <a id="b-btn-sj" class="btn b-btn-on " href="#index"></a> -->
+					<a id="hm-btn-sj" class="btn hm-btn " href="#index"></a>
+				</div>
+			</div>
+    	</div>
+    	<!--Pag de seleccion de juego: fin -->
+
+       	<script type="text/javascript">
+            app.initialize();
+            app.loadApp();            
+        </script>
+    </body>
+</html>
