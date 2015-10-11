@@ -153,6 +153,9 @@ var nivelSuperadoManager = {
 var dialogManager ={
 	
 	// currentDialog
+	// Usar Media plugin de Phonegap cuando se implemente el audio
+	//http://docs.phonegap.com/en/edge/cordova_media_media.md.html
+	//TODO: organizar todo lo relativo al audio y la animación en otro archivo js.
 	
 	startDialog: function( hideElements, showElements, animationElemPair, soundFilePath, time ){
 		
@@ -245,7 +248,7 @@ var elemAnimador = {
 				var origLeft = $(this).attr("data-origleft");
 				$(this).data("ui-draggable").originalPosition = {
 					top : origTop,
-					left : origLeft,
+					left : origLeft
 				};
 				
 				return event !== false ? false : true;
@@ -269,7 +272,7 @@ var elemAnimador = {
 					}
 				}
 				
-			},//Fired when the user first starts dragging the element.
+			}//Fired when the user first starts dragging the element.
   		} );
 		
 	},
@@ -404,7 +407,7 @@ var productos = {
 	beldV_3pe : {"rutaImg":"../img/prod/beld-v.png", "precio":3 },
 	beldN_4pe : {"rutaImg":"../img/prod/beld-n.png", "precio":4 },
 	oreo_18pe : {"rutaImg":"../img/prod/oreo.png", "precio":18 },
-	oreo_12pe : {"rutaImg":"../img/prod/oreo.png", "precio":12 },	
+	oreo_12pe : {"rutaImg":"../img/prod/oreo.png", "precio":12 }
 	
 };
 
@@ -467,7 +470,7 @@ var variantesDePago = {
 						"12":[	mediosDePago.moneda2, mediosDePago.moneda2, 
 								mediosDePago.moneda2, mediosDePago.moneda2, 
 								mediosDePago.moneda2, mediosDePago.moneda2
-							],	    	
+							]
 				   },
 	
 	billetes:{		
@@ -1072,7 +1075,7 @@ var variantesDePago = {
 								mediosDePago.bill10, mediosDePago.bill100, 
 								mediosDePago.bill20, mediosDePago.bill50
 							]	    	
-				},
+				}
 };
 
 

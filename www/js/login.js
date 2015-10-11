@@ -158,7 +158,7 @@ var usrManager = {
 			
 			localStorage.setItem(this.getFile(), JSON.stringify(usr));
 		},
-		
+
 		crearJugador: function(nomJugCreado, usuarioInicial){
 			
 			var jugador = {};
@@ -204,7 +204,7 @@ var usrManager = {
 						
 			this.saveJugador(usrs, jugador);
 		},
-		
+
 		//Obtiene el ultimo nivel ganado por el jugador activo. Si el jugador activo es el invitado o el jugador recien fue creado, entonces el nivel es 0.
 		//Llamado correcto a la funcion usrManager.getUltimoNivelGanado(juegos.contarDinero())
 		getUltimoNivelGanado: function(juego){
@@ -223,6 +223,6 @@ var usrManager = {
 			for (index = 0; index < jugador.juegosGanados.length; index++){
 				if (jugador.juegosGanados[index].juego == juego) return jugador.juegosGanados[index].nivel;				
 			}
-		},
+		}
 		
 };
